@@ -1,0 +1,2381 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\LeaderGenerator.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_MAINFRAME      ICON                    "res\\LeaderGenerator.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 166, 80
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 LeaderGenerator"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            128,IDC_STATIC_ABOUT_ICON,14,14,20,20
+    LTEXT           "Version",IDC_STATIC_ABOUT_VERSION,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright",IDC_STATIC_ABOUT_COPYRIGHT,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,60,49,45,16,WS_GROUP
+    CONTROL         "<a>mailto:</a>",IDC_STATIC_ABOUT_SYSLINK1,"SysLink",WS_TABSTOP,42,40,114,8
+END
+
+IDD_LEADERGENERATOR_DIALOG DIALOGEX 0, 0, 303, 216
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "LeadersGenerator"
+MENU IDR_MENU1
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "设置数据",IDOK,10,193,50,14
+    PUSHBUTTON      "退出",IDCANCEL,250,199,50,14
+    CONTROL         "输出",IDC_STATIC_MAIN,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,186,6,117,131
+    PUSHBUTTON      "生成",IDC_BUTTON_GEN,250,185,50,14
+    PUSHBUTTON      "预览",IDC_BUTTON_PREVIEW,250,171,50,14
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,75,189,137,14
+    GROUPBOX        "使用ID生成",IDC_GROUP_M2,187,140,56,15
+    GROUPBOX        "手动输入数量",IDC_GROUP_M1,6,154,243,27
+    CONTROL         "",IDC_CHECK_M1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,55,153,12,10
+    CONTROL         "",IDC_CHECK_M2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,227,141,12,10
+    EDITTEXT        IDC_EDIT_LAND,45,165,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_AIR,126,165,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NAVY,205,165,40,12,ES_AUTOHSCROLL
+    LTEXT           "陆军个数：",IDC_STATIC,9,165,35,14
+    LTEXT           "空军个数：",IDC_STATIC,88,165,35,14
+    LTEXT           "海军个数：",IDC_STATIC,169,165,35,14
+    CONTROL         "",IDC_TAB,"SysTabControl32",WS_TABSTOP,7,9,176,140
+END
+
+IDD_TAB0 DIALOGEX 0, 0, 200, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_TRANSPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_TAB1 DIALOGEX 0, 0, 200, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_TRANSPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_TAB1_LIST,4,4,90,109,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "411姓",IDC_TAB1_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,17,39,10
+    CONTROL         "412名字",IDC_TAB1_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,18,39,10
+    CONTROL         "413使用汉字",IDC_TAB1_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,37,57,10
+    GROUPBOX        "姓名",IDC_TAB1_GROUP1,100,7,86,26
+    EDITTEXT        IDC_TAB1_EDIT1,107,58,57,14,ES_AUTOHSCROLL
+END
+
+IDD_TAB2 DIALOGEX 0, 0, 200, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TAB2_EDIT,24,9,59,14,ES_AUTOHSCROLL
+    CONTROL         "421",IDC_TAB2_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,33,59,10
+END
+
+IDD_TAB3 DIALOGEX 0, 0, 200, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "431资质显示在姓名前",IDC_TAB3_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,65,69,103,10
+    CONTROL         "",IDC_TAB3_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,55,14,100,28
+    LTEXT           "432资质",IDC_TAB3_STATIC,6,19,40,14
+    EDITTEXT        IDC_TAB3_EDIT1,65,49,40,14,ES_AUTOHSCROLL
+    CONTROL         "433所有将领资质随机化",IDC_TAB3_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,65,81,103,10
+END
+
+IDD_TAB4 DIALOGEX 0, 0, 200, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "441没有保守派",IDC_TAB4_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,4,68,10
+    CONTROL         "442兼容FTM",IDC_TAB4_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,18,56,10
+    CONTROL         "443自定义将领技能组",IDC_TAB4_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,92,10
+    CONTROL         "",IDC_TAB4_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,14,82,100,27
+    LTEXT           "444",IDC_TAB4_STATIC,19,60,83,13
+    GROUPBOX        "445将领特技个数",IDC_TAB4_STATIC2,99,6,72,58
+    CONTROL         "446平均分布",IDC_TAB4_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,104,17,60,10
+    CONTROL         "447正态分布",IDC_TAB4_RADIO2,"Button",BS_AUTORADIOBUTTON,104,32,60,10
+    EDITTEXT        IDC_TAB4_EDIT1,121,87,47,14,ES_AUTOHSCROLL
+    CONTROL         "448没有分布",IDC_TAB4_RADIO3,"Button",BS_AUTORADIOBUTTON,104,47,60,10
+END
+
+IDD_TAB5 DIALOGEX 0, 0, 200, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TAB5_EDIT1,13,63,56,14,ES_AUTOHSCROLL
+    LTEXT           "453头像ID号",IDC_TAB5_STATIC,13,41,63,10
+    CONTROL         "454使用同一头像",IDC_TAB5_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,94,72,9
+    CONTROL         "455生成",IDC_TAB5_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,20,63,10
+    CONTROL         "456使用现有",IDC_TAB5_RADIO2,"Button",BS_AUTORADIOBUTTON,107,18,63,10
+    GROUPBOX        "451顺序生成",IDC_TAB5_GROUP1,7,8,80,100
+    GROUPBOX        "452使用现有",IDC_TAB5_GROUP2,103,8,88,101
+    LISTBOX         IDC_TAB5_LIST1,109,47,61,57,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "457无",IDC_TAB5_STATIC2,109,34,63,10
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 316, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SET_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_CHECKBOXES | TVS_NOHSCROLL | TVS_INFOTIP | WS_BORDER | WS_GROUP | WS_TABSTOP,11,10,139,152
+    PUSHBUTTON      "导出",IDC_SET_BUTTON1,257,142,50,14
+    PUSHBUTTON      "导入",IDC_SET_BUTTON2,257,125,50,14
+    PUSHBUTTON      "返回",IDC_SET_BUTTON3,257,159,50,14
+    LTEXT           "静态",IDC_SET_OUT,189,10,107,95
+END
+
+IDD_MUSICFILES DIALOGEX 0, 0, 316, 185
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "输出到文件",IDC_MFILE_BTN1,261,145,50,14
+    PUSHBUTTON      "返回",IDC_MFILE_BTN2,261,160,50,14
+    EDITTEXT        IDC_MFILE_EDIT1,198,23,113,87,ES_MULTILINE | ES_AUTOHSCROLL
+    LTEXT           "静态",IDC_MFILE_NOTES,198,10,113,8
+    PUSHBUTTON      "保存到列表",IDC_MFILE_BTN3,261,130,50,14
+    CONTROL         "",IDC_MFILE_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_INFOTIP | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,4,167,166
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,5,5,39
+ PRODUCTVERSION 1,5,5,39
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "National Idea"
+            VALUE "FileDescription", "HOI3 Game Tools"
+            VALUE "FileVersion", "1.5.5.39"
+            VALUE "InternalName", "LeaderGenerator.exe"
+            VALUE "LegalCopyright", "2014 (C) <National Idea>.All Right Reserved."
+            VALUE "OriginalFilename", "LeaderGenerator.exe"
+            VALUE "ProductName", "LeaderGenerator"
+            VALUE "ProductVersion", "1.5.5.39"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 159
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 73
+    END
+
+    IDD_LEADERGENERATOR_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_TAB0, DIALOG
+    BEGIN
+    END
+
+    IDD_TAB1, DIALOG
+    BEGIN
+    END
+
+    IDD_TAB2, DIALOG
+    BEGIN
+    END
+
+    IDD_TAB3, DIALOG
+    BEGIN
+    END
+
+    IDD_TAB5, DIALOG
+    BEGIN
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+    END
+
+    IDD_MUSICFILES, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)",                      IDM_FILE_NEW
+        MENUITEM "打开(&O)",                      IDM_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      IDM_FILE_EXIT
+    END
+    POPUP "工具(&O)"
+    BEGIN
+        MENUITEM "导出设置(&E)",                    IDM_TOOLS_EXPORT
+        MENUITEM "导入设置(&I)",                    IDM_TOOLS_IMPORT
+        MENUITEM "生成音乐文件(&M)",                  IDM_TOOLS_MUSIC
+        MENUITEM SEPARATOR
+        MENUITEM "选项(&O)",                      IDM_TOOLS_OPTION, GRAYED
+    END
+    POPUP "关于(&A)"
+    BEGIN
+        MENUITEM "关于(&A)",                      IDM_ABOUT
+    END
+END
+
+IDR_MENU2 MENU
+BEGIN
+    POPUP "CMFILELIST"
+    BEGIN
+        MENUITEM "剪切",                          IDM_MFILE_CUT
+        MENUITEM "复制",                          IDM_MFILE_COPY
+        MENUITEM "粘贴",                          IDM_MFILE_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "插入Factor",                    IDM_MFILE_INSERT
+    END
+END
+
+IDR_MENU3 MENU
+BEGIN
+    POPUP "CMFILETREE"
+    BEGIN
+        MENUITEM "添加",                          IDM_MFILE_TREE_ADD
+        MENUITEM "删除",                          IDM_MFILE_TREE_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_COPYRIGHT_AUTHOR    "国家理念"
+    IDS_COPYRIGHT_UNIVERSITY "hit"
+    IDS_COPYRIGHT_EMAIL     "rubost@outlook.com"
+    IDS_COPYRIGHT_YEAR      "copyright 2012"
+    IDS_ABOUTBOX            "关于 LeaderGenerator(&A)..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_VERSION_MAJOR       "1"
+    IDS_VERSION_MINOR       "4"
+    IDS_VERSION_REVISION    "4"
+    IDS_VERSION_BUILD       "32"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TYPE                "类型"
+    IDS_TYPE_LAND_UI        "陆军"
+    IDS_TYPE_AIR_UI         "空军"
+    IDS_TYPE_NAVY_UI        "海军"
+    IDS_TYPE_LAND           "land"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TYPE_AIR            "air"
+    IDS_TYPE_NAVY           "sea"
+    IDS_NAME_STYLE          "名字风格"
+    IDS_NAME_ENGLISH        "英格兰风格"
+    IDS_NAME_GERMANIC       "德意志风格"
+    IDS_NAME_FRENCH         "法国风格"
+    IDS_NAME_RUSSIAN        "俄罗斯风格"
+    IDS_NAME_SWEDISH        "瑞典风格"
+    IDS_NAME_UKRAINIAN      "乌克兰风格"
+    IDS_NAME_CHINESE        "中文风格"
+    IDS_NAME_STYLE_END      "名字风格结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG0                "REB"
+    IDS_TAG1                "GER"
+    IDS_TAG2                "ENG"
+    IDS_TAG3                "SOV"
+    IDS_TAG4                "USA"
+    IDS_TAG5                "JAP"
+    IDS_TAG6                "FRA"
+    IDS_TAG7                "ITA"
+    IDS_TAG8                "DEN"
+    IDS_TAG9                "ICL"
+    IDS_TAG10               "EST"
+    IDS_TAG11               "FIN"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG12               "LAT"
+    IDS_TAG13               "LIT"
+    IDS_TAG14               "NOR"
+    IDS_TAG15               "SCA"
+    IDS_TAG16               "SWE"
+    IDS_TAG17               "BEL"
+    IDS_TAG18               "FLA"
+    IDS_TAG19               "HOL"
+    IDS_TAG20               "IRE"
+    IDS_TAG21               "LUX"
+    IDS_TAG22               "SCO"
+    IDS_TAG23               "VIC"
+    IDS_TAG24               "WLL"
+    IDS_TAG25               "AUS"
+    IDS_TAG26               "CZE"
+    IDS_TAG27               "CRO"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG28               "DDR"
+    IDS_TAG29               "DFR"
+    IDS_TAG30               "HUN"
+    IDS_TAG31               "POL"
+    IDS_TAG32               "ROM"
+    IDS_TAG33               "SLO"
+    IDS_TAG34               "SLV"
+    IDS_TAG35               "SCH"
+    IDS_TAG36               "EUS"
+    IDS_TAG37               "POR"
+    IDS_TAG38               "RSI"
+    IDS_TAG39               "SPA"
+    IDS_TAG40               "SPR"
+    IDS_TAG41               "ALB"
+    IDS_TAG42               "BOS"
+    IDS_TAG43               "BUL"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG44               "GRE"
+    IDS_TAG45               "MTN"
+    IDS_TAG46               "SER"
+    IDS_TAG47               "YUG"
+    IDS_TAG48               "BLR"
+    IDS_TAG49               "PRI"
+    IDS_TAG50               "RUS"
+    IDS_TAG51               "SIB"
+    IDS_TAG52               "TAN"
+    IDS_TAG53               "TRA"
+    IDS_TAG54               "UKR"
+    IDS_TAG55               "AFG"
+    IDS_TAG56               "ARA"
+    IDS_TAG57               "ARM"
+    IDS_TAG58               "AZB"
+    IDS_TAG59               "CYP"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG60               "GEO"
+    IDS_TAG61               "IRQ"
+    IDS_TAG62               "ISR"
+    IDS_TAG63               "JOR"
+    IDS_TAG64               "LEB"
+    IDS_TAG65               "OMN"
+    IDS_TAG66               "OTT"
+    IDS_TAG67               "PAL"
+    IDS_TAG68               "PER"
+    IDS_TAG69               "SAU"
+    IDS_TAG70               "SYR"
+    IDS_TAG71               "TUR"
+    IDS_TAG72               "YEM"
+    IDS_TAG73               "KAZ"
+    IDS_TAG74               "KUR"
+    IDS_TAG75               "KYG"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG76               "TAJ"
+    IDS_TAG77               "TRK"
+    IDS_TAG78               "UZB"
+    IDS_TAG79               "BHU"
+    IDS_TAG80               "IND"
+    IDS_TAG81               "NEP"
+    IDS_TAG82               "PAK"
+    IDS_TAG83               "CGX"
+    IDS_TAG84               "CHC"
+    IDS_TAG85               "CHI"
+    IDS_TAG86               "CSX"
+    IDS_TAG87               "CXB"
+    IDS_TAG88               "CYN"
+    IDS_TAG89               "KOR"
+    IDS_TAG90               "MAN"
+    IDS_TAG91               "MEN"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG92               "MON"
+    IDS_TAG93               "PRK"
+    IDS_TAG94               "SIK"
+    IDS_TAG95               "TIB"
+    IDS_TAG96               "BRU"
+    IDS_TAG97               "BUR"
+    IDS_TAG98               "CMB"
+    IDS_TAG99               "IDC"
+    IDS_TAG100              "INO"
+    IDS_TAG101              "LAO"
+    IDS_TAG102              "MLY"
+    IDS_TAG103              "PHI"
+    IDS_TAG104              "SAR"
+    IDS_TAG105              "SIA"
+    IDS_TAG106              "VIE"
+    IDS_TAG107              "ALG"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG108              "EGY"
+    IDS_TAG109              "LBY"
+    IDS_TAG110              "MOR"
+    IDS_TAG111              "SUD"
+    IDS_TAG112              "TUN"
+    IDS_TAG113              "BEN"
+    IDS_TAG114              "GLD"
+    IDS_TAG115              "GUI"
+    IDS_TAG116              "LIB"
+    IDS_TAG117              "MAL"
+    IDS_TAG118              "NIG"
+    IDS_TAG119              "SIE"
+    IDS_TAG120              "KON"
+    IDS_TAG121              "EAF"
+    IDS_TAG122              "ETH"
+    IDS_TAG123              "GAB"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG124              "CAM"
+    IDS_TAG125              "SOM"
+    IDS_TAG126              "ANG"
+    IDS_TAG127              "EQA"
+    IDS_TAG128              "MAD"
+    IDS_TAG129              "MOZ"
+    IDS_TAG130              "NAM"
+    IDS_TAG131              "RHO"
+    IDS_TAG132              "SAF"
+    IDS_TAG133              "AST"
+    IDS_TAG134              "NZL"
+    IDS_TAG135              "CAL"
+    IDS_TAG136              "CAN"
+    IDS_TAG137              "CSA"
+    IDS_TAG138              "QUE"
+    IDS_TAG139              "CUB"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG140              "COS"
+    IDS_TAG141              "DOM"
+    IDS_TAG142              "GUA"
+    IDS_TAG143              "HAI"
+    IDS_TAG144              "HON"
+    IDS_TAG145              "NIC"
+    IDS_TAG146              "PAN"
+    IDS_TAG147              "SAL"
+    IDS_TAG148              "ARG"
+    IDS_TAG149              "BOL"
+    IDS_TAG150              "BRA"
+    IDS_TAG151              "CHL"
+    IDS_TAG152              "COL"
+    IDS_TAG153              "ECU"
+    IDS_TAG154              "GUY"
+    IDS_TAG155              "MEX"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAG156              "PAR"
+    IDS_TAG157              "PRU"
+    IDS_TAG158              "TEX"
+    IDS_TAG159              "URU"
+    IDS_TAG160              "VEN"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TRAIT_LAND          "陆军将领特技"
+    IDS_TRAIT_LAND_OLD_GUARD "old_guard"
+    IDS_TRAIT_LAND_TRICKSTER "trickster"
+    IDS_TRAIT_LAND_COMMANDO "commando"
+    IDS_TRAIT_LAND_ENGINEER "engineer"
+    IDS_TRAIT_LAND_DEFENSIVE_DOCTRINE "defensive_doctrine"
+    IDS_TRAIT_LAND_OFFENSIVE_DOCTRINE "offensive_doctrine"
+    IDS_TRAIT_LAND_FORTRESS_BUSTER "fortress_buster"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TRAIT_LAND_LOGISTICS_WIZARD "logistics_wizard"
+    IDS_TRAIT_LAND_PANZER_LEADER "panzer_leader"
+    IDS_TRAIT_LAND_WINTER_SPECIALIST "winter_specialist"
+    IDS_TRAIT_LAND_DESERT_FOX "desert_fox"
+    IDS_TRAIT_LAND_HILL_FIGHTER "hill_fighter"
+    IDS_TRAIT_LAND_JUNGLE_RAT "jungle_rat"
+    IDS_TRAIT_LAND_MOUNTAINEER "mountaineer"
+    IDS_TRAIT_LAND_RANGER   "ranger"
+    IDS_TRAIT_LAND_SWAMP_FOX "swamp_fox"
+    IDS_TRAIT_LAND_URBAN_ASSAULT_SPECIALIST "urban_assault_specialist"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TRAIT_AIR           "空军将领特技"
+    IDS_TRAIT_AIR_OLD_GUARD "old_guard"
+    IDS_TRAIT_AIR_CARPET_BOMBER "carpet_bomber"
+    IDS_TRAIT_AIR_FLEET_DESTROYER "fleet_destroyer"
+    IDS_TRAIT_AIR_NIGHT_FLYER "night_flyer"
+    IDS_TRAIT_AIR_SUPERIOR_AIR_TACTICIAN "superior_air_tactician"
+    IDS_TRAIT_AIR_TANK_BUSTER "tank_buster"
+    IDS_TRAIT_AIR_SPOTTER   "spotter"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TRAIT_NAVY          "海军将领特技"
+    IDS_TRAIT_NAVY_OLD_GUARD "old_guard"
+    IDS_TRAIT_NAVY_BLOCKADE_RUNNER "blockade_runner"
+    IDS_TRAIT_NAVY_SEAWOLF  "seawolf"
+    IDS_TRAIT_NAVY_SUPERIOR_TACTICIAN "superior_tactician"
+    IDS_TRAIT_NAVY_SPOTTER  "spotter"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_FNAME       "英格兰姓"
+    IDS_ENG_ENG_FNAME_1     "Brown"
+    IDS_ENG_ENG_FNAME_2     "Smith"
+    IDS_ENG_ENG_FNAME_3     "Patel"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_FNAME_4     "Jones"
+    IDS_ENG_ENG_FNAME_5     "Williams"
+    IDS_ENG_ENG_FNAME_6     "Johnson"
+    IDS_ENG_ENG_FNAME_7     "Taylor"
+    IDS_ENG_ENG_FNAME_8     "Thomas"
+    IDS_ENG_ENG_FNAME_9     "Roberts"
+    IDS_ENG_ENG_FNAME_10    "Khan"
+    IDS_ENG_ENG_FNAME_11    "Lewis"
+    IDS_ENG_ENG_FNAME_12    "Jackson"
+    IDS_ENG_ENG_FNAME_13    "Clarke"
+    IDS_ENG_ENG_FNAME_14    "James"
+    IDS_ENG_ENG_FNAME_15    "Phillips"
+    IDS_ENG_ENG_FNAME_16    "Wilson"
+    IDS_ENG_ENG_FNAME_17    "Ali"
+    IDS_ENG_ENG_FNAME_18    "Mason"
+    IDS_ENG_ENG_FNAME_19    "Mitchell"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_FNAME_20    "Rose"
+    IDS_ENG_ENG_FNAME_21    "Davis"
+    IDS_ENG_ENG_FNAME_22    "Davies"
+    IDS_ENG_ENG_FNAME_23    "Rodriguez"
+    IDS_ENG_ENG_FNAME_24    "Cox"
+    IDS_ENG_ENG_FNAME_25    "Alexander"
+    IDS_ENG_ENG_FNAME_END   "英格兰姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_GNAME       "英格兰名"
+    IDS_ENG_ENG_GNAME_1     "Harry"
+    IDS_ENG_ENG_GNAME_2     "Oliver"
+    IDS_ENG_ENG_GNAME_3     "Jack"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_GNAME_4     "Charlie"
+    IDS_ENG_ENG_GNAME_5     "Alfie"
+    IDS_ENG_ENG_GNAME_6     "Thomas"
+    IDS_ENG_ENG_GNAME_7     "James"
+    IDS_ENG_ENG_GNAME_8     "Jacob"
+    IDS_ENG_ENG_GNAME_9     "Joshua"
+    IDS_ENG_ENG_GNAME_10    "William"
+    IDS_ENG_ENG_GNAME_11    "Ethan"
+    IDS_ENG_ENG_GNAME_12    "George"
+    IDS_ENG_ENG_GNAME_13    "Riley"
+    IDS_ENG_ENG_GNAME_14    "Daniel"
+    IDS_ENG_ENG_GNAME_15    "Samuel"
+    IDS_ENG_ENG_GNAME_16    "Oscar"
+    IDS_ENG_ENG_GNAME_17    "Noah"
+    IDS_ENG_ENG_GNAME_18    "Mohammed"
+    IDS_ENG_ENG_GNAME_19    "Joseph"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_GNAME_20    "Max"
+    IDS_ENG_ENG_GNAME_21    "Muhammad"
+    IDS_ENG_ENG_GNAME_22    "Alexander"
+    IDS_ENG_ENG_GNAME_23    "Archie"
+    IDS_ENG_ENG_GNAME_24    "Dylan"
+    IDS_ENG_ENG_GNAME_25    "Benjamin"
+    IDS_ENG_ENG_GNAME_26    "Lucas"
+    IDS_ENG_ENG_GNAME_27    "Henry"
+    IDS_ENG_ENG_GNAME_28    "Leo"
+    IDS_ENG_ENG_GNAME_29    "Jake"
+    IDS_ENG_ENG_GNAME_30    "Tyler"
+    IDS_ENG_ENG_GNAME_31    "Logan"
+    IDS_ENG_ENG_GNAME_32    "Isaac"
+    IDS_ENG_ENG_GNAME_33    "Jayden"
+    IDS_ENG_ENG_GNAME_34    "Finley"
+    IDS_ENG_ENG_GNAME_35    "Ryan"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_GNAME_36    "Harrison"
+    IDS_ENG_ENG_GNAME_37    "Mason"
+    IDS_ENG_ENG_GNAME_38    "Adam"
+    IDS_ENG_ENG_GNAME_39    "Lewis"
+    IDS_ENG_ENG_GNAME_40    "Edward"
+    IDS_ENG_ENG_GNAME_41    "Freddie"
+    IDS_ENG_ENG_GNAME_42    "Luke"
+    IDS_ENG_ENG_GNAME_43    "Matthew"
+    IDS_ENG_ENG_GNAME_44    "Liam"
+    IDS_ENG_ENG_GNAME_45    "Zachary"
+    IDS_ENG_ENG_GNAME_46    "Callum"
+    IDS_ENG_ENG_GNAME_47    "Sebastian"
+    IDS_ENG_ENG_GNAME_48    "Jamie"
+    IDS_ENG_ENG_GNAME_49    "Connor"
+    IDS_ENG_ENG_GNAME_50    "Toby"
+    IDS_ENG_ENG_GNAME_51    "Harvey"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_GNAME_52    "Theo"
+    IDS_ENG_ENG_GNAME_53    "Michael"
+    IDS_ENG_ENG_GNAME_54    "Nathan"
+    IDS_ENG_ENG_GNAME_55    "Harley"
+    IDS_ENG_ENG_GNAME_56    "Kai"
+    IDS_ENG_ENG_GNAME_57    "David"
+    IDS_ENG_ENG_GNAME_58    "Aaron"
+    IDS_ENG_ENG_GNAME_59    "Alex"
+    IDS_ENG_ENG_GNAME_60    "Charles"
+    IDS_ENG_ENG_GNAME_61    "Aiden"
+    IDS_ENG_ENG_GNAME_62    "Mohammad"
+    IDS_ENG_ENG_GNAME_63    "Leon"
+    IDS_ENG_ENG_GNAME_64    "Tommy"
+    IDS_ENG_ENG_GNAME_65    "Finlay"
+    IDS_ENG_ENG_GNAME_66    "Arthur"
+    IDS_ENG_ENG_GNAME_67    "Luca"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_GNAME_68    "Louis"
+    IDS_ENG_ENG_GNAME_69    "Reuben"
+    IDS_ENG_ENG_GNAME_70    "Jenson"
+    IDS_ENG_ENG_GNAME_71    "Louie"
+    IDS_ENG_ENG_GNAME_72    "Owen"
+    IDS_ENG_ENG_GNAME_73    "Bobby"
+    IDS_ENG_ENG_GNAME_74    "Ollie"
+    IDS_ENG_ENG_GNAME_75    "Gabriel"
+    IDS_ENG_ENG_GNAME_76    "Stanley"
+    IDS_ENG_ENG_GNAME_77    "Dexter"
+    IDS_ENG_ENG_GNAME_78    "Cameron"
+    IDS_ENG_ENG_GNAME_79    "Blake"
+    IDS_ENG_ENG_GNAME_80    "Rhys"
+    IDS_ENG_ENG_GNAME_81    "Jude"
+    IDS_ENG_ENG_GNAME_82    "Frankie"
+    IDS_ENG_ENG_GNAME_83    "Hayden"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENG_ENG_GNAME_84    "Kian"
+    IDS_ENG_ENG_GNAME_85    "Elliot"
+    IDS_ENG_ENG_GNAME_86    "Joel"
+    IDS_ENG_ENG_GNAME_87    "Bailey"
+    IDS_ENG_ENG_GNAME_88    "Robert"
+    IDS_ENG_ENG_GNAME_89    "Taylor"
+    IDS_ENG_ENG_GNAME_90    "Elijah"
+    IDS_ENG_ENG_GNAME_91    "Frederick"
+    IDS_ENG_ENG_GNAME_92    "Kyle"
+    IDS_ENG_ENG_GNAME_93    "Reece"
+    IDS_ENG_ENG_GNAME_94    "Caleb"
+    IDS_ENG_ENG_GNAME_95    "Ashton"
+    IDS_ENG_ENG_GNAME_96    "Ben"
+    IDS_ENG_ENG_GNAME_97    "Evan"
+    IDS_ENG_ENG_GNAME_98    "Kayden"
+    IDS_ENG_ENG_GNAME_END   "英格兰名字结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEU_GER_FNAME       "德国姓"
+    IDS_DEU_GER_FNAME_1     "Müller"
+    IDS_DEU_GER_FNAME_2     "Schmidt"
+    IDS_DEU_GER_FNAME_3     "Schneider"
+    IDS_DEU_GER_FNAME_4     "Fischer"
+    IDS_DEU_GER_FNAME_5     "Meyer"
+    IDS_DEU_GER_FNAME_6     "Weber"
+    IDS_DEU_GER_FNAME_7     "Schulz"
+    IDS_DEU_GER_FNAME_8     "Wagner"
+    IDS_DEU_GER_FNAME_9     "Becker"
+    IDS_DEU_GER_FNAME_10    "Hoffmann"
+    IDS_DEU_GER_FNAME_END   "德国姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEU_GER_GNAME       "德国名字"
+    IDS_DEU_GER_GNAME_1     "Alexander"
+    IDS_DEU_GER_GNAME_2     "Andreas"
+    IDS_DEU_GER_GNAME_3     "Benjamin"
+    IDS_DEU_GER_GNAME_4     "Bernd"
+    IDS_DEU_GER_GNAME_5     "Christian"
+    IDS_DEU_GER_GNAME_6     "Daniel"
+    IDS_DEU_GER_GNAME_7     "David"
+    IDS_DEU_GER_GNAME_8     "Dennis"
+    IDS_DEU_GER_GNAME_9     "Dieter"
+    IDS_DEU_GER_GNAME_10    "Dirk"
+    IDS_DEU_GER_GNAME_11    "Dominik"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEU_GER_GNAME_12    "Eric"
+    IDS_DEU_GER_GNAME_13    "Erik"
+    IDS_DEU_GER_GNAME_14    "Felix"
+    IDS_DEU_GER_GNAME_15    "Florian"
+    IDS_DEU_GER_GNAME_16    "Frank"
+    IDS_DEU_GER_GNAME_17    "Franz"
+    IDS_DEU_GER_GNAME_18    "Jan"
+    IDS_DEU_GER_GNAME_19    "Jens"
+    IDS_DEU_GER_GNAME_20    "Jonas"
+    IDS_DEU_GER_GNAME_21    "Joerg"
+    IDS_DEU_GER_GNAME_22    "Jürgen"
+    IDS_DEU_GER_GNAME_23    "Karl-Heinz"
+    IDS_DEU_GER_GNAME_24    "Kevin"
+    IDS_DEU_GER_GNAME_25    "Klaus"
+    IDS_DEU_GER_GNAME_26    "Kristian"
+    IDS_DEU_GER_GNAME_27    "Leon"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEU_GER_GNAME_28    "Lukas"
+    IDS_DEU_GER_GNAME_29    "Marcel"
+    IDS_DEU_GER_GNAME_30    "Marco"
+    IDS_DEU_GER_GNAME_31    "Marko"
+    IDS_DEU_GER_GNAME_32    "Mario"
+    IDS_DEU_GER_GNAME_33    "Markus"
+    IDS_DEU_GER_GNAME_34    "Martin"
+    IDS_DEU_GER_GNAME_35    "Mathias"
+    IDS_DEU_GER_GNAME_36    "Matthias"
+    IDS_DEU_GER_GNAME_37    "Max"
+    IDS_DEU_GER_GNAME_38    "Maximilian"
+    IDS_DEU_GER_GNAME_39    "Michael"
+    IDS_DEU_GER_GNAME_40    "Mike"
+    IDS_DEU_GER_GNAME_41    "Maik"
+    IDS_DEU_GER_GNAME_42    "Niklas"
+    IDS_DEU_GER_GNAME_43    "Patrick"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEU_GER_GNAME_44    "Paul"
+    IDS_DEU_GER_GNAME_45    "Peter"
+    IDS_DEU_GER_GNAME_46    "Philipp"
+    IDS_DEU_GER_GNAME_47    "Phillipp"
+    IDS_DEU_GER_GNAME_48    "Ralf"
+    IDS_DEU_GER_GNAME_49    "Ralph"
+    IDS_DEU_GER_GNAME_50    "René"
+    IDS_DEU_GER_GNAME_51    "Robert"
+    IDS_DEU_GER_GNAME_52    "Sebastian"
+    IDS_DEU_GER_GNAME_53    "Stefan"
+    IDS_DEU_GER_GNAME_54    "Stephan"
+    IDS_DEU_GER_GNAME_55    "Steffen"
+    IDS_DEU_GER_GNAME_56    "Sven"
+    IDS_DEU_GER_GNAME_57    "Swen"
+    IDS_DEU_GER_GNAME_58    "Thomas"
+    IDS_DEU_GER_GNAME_59    "Thorsten"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEU_GER_GNAME_60    "Torsten"
+    IDS_DEU_GER_GNAME_61    "Tim"
+    IDS_DEU_GER_GNAME_62    "Tobias"
+    IDS_DEU_GER_GNAME_63    "Tom"
+    IDS_DEU_GER_GNAME_64    "Ulrich"
+    IDS_DEU_GER_GNAME_65    "Uwe"
+    IDS_DEU_GER_GNAME_66    "Wilhelm"
+    IDS_DEU_GER_GNAME_67    "Wolfgang"
+    IDS_DEU_GER_GNAME_END   "德国名字结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_FNAME       "法国姓"
+    IDS_LAT_FRA_FNAME_1     "Martin"
+    IDS_LAT_FRA_FNAME_2     "Bernard"
+    IDS_LAT_FRA_FNAME_3     "Dubois"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_FNAME_4     "Thomas"
+    IDS_LAT_FRA_FNAME_5     "Robert"
+    IDS_LAT_FRA_FNAME_6     "Richard"
+    IDS_LAT_FRA_FNAME_7     "Petit"
+    IDS_LAT_FRA_FNAME_8     "Durand"
+    IDS_LAT_FRA_FNAME_9     "Leroy"
+    IDS_LAT_FRA_FNAME_10    "Moreau"
+    IDS_LAT_FRA_FNAME_11    "Simon"
+    IDS_LAT_FRA_FNAME_12    "Laurent"
+    IDS_LAT_FRA_FNAME_13    "Lefebvre"
+    IDS_LAT_FRA_FNAME_14    "Michel"
+    IDS_LAT_FRA_FNAME_15    "Garcia"
+    IDS_LAT_FRA_FNAME_16    "David"
+    IDS_LAT_FRA_FNAME_17    "Bertrand"
+    IDS_LAT_FRA_FNAME_18    "Roux"
+    IDS_LAT_FRA_FNAME_19    "Vincent"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_FNAME_20    "Fournier"
+    IDS_LAT_FRA_FNAME_21    "Morel"
+    IDS_LAT_FRA_FNAME_22    "Girard"
+    IDS_LAT_FRA_FNAME_23    "André"
+    IDS_LAT_FRA_FNAME_24    "Lefèvre"
+    IDS_LAT_FRA_FNAME_25    "Mercier"
+    IDS_LAT_FRA_FNAME_26    "Dupont"
+    IDS_LAT_FRA_FNAME_27    "Lambert"
+    IDS_LAT_FRA_FNAME_28    "Bonnet"
+    IDS_LAT_FRA_FNAME_29    "Francois"
+    IDS_LAT_FRA_FNAME_30    "Martinez"
+    IDS_LAT_FRA_FNAME_END   "法国姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_GNAME       "法国名"
+    IDS_LAT_FRA_GNAME_1     "Adrien"
+    IDS_LAT_FRA_GNAME_2     "Aime"
+    IDS_LAT_FRA_GNAME_3     "Alban"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_GNAME_4     "Amand"
+    IDS_LAT_FRA_GNAME_5     "Amédée"
+    IDS_LAT_FRA_GNAME_6     "Anthony"
+    IDS_LAT_FRA_GNAME_7     "Antoine"
+    IDS_LAT_FRA_GNAME_8     "Antonin"
+    IDS_LAT_FRA_GNAME_9     "Aubin"
+    IDS_LAT_FRA_GNAME_10    "Auguste"
+    IDS_LAT_FRA_GNAME_11    "Aurélien"
+    IDS_LAT_FRA_GNAME_12    "Austin"
+    IDS_LAT_FRA_GNAME_13    "Benoit"
+    IDS_LAT_FRA_GNAME_14    "Calvin"
+    IDS_LAT_FRA_GNAME_15    "Célestin"
+    IDS_LAT_FRA_GNAME_16    "Célio"
+    IDS_LAT_FRA_GNAME_17    "César"
+    IDS_LAT_FRA_GNAME_18    "Claude"
+    IDS_LAT_FRA_GNAME_19    "Clément"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_GNAME_20    "Dominique"
+    IDS_LAT_FRA_GNAME_21    "Fabien"
+    IDS_LAT_FRA_GNAME_22    "Florent"
+    IDS_LAT_FRA_GNAME_23    "Félix"
+    IDS_LAT_FRA_GNAME_24    "Gatien"
+    IDS_LAT_FRA_GNAME_25    "Grégoire"
+    IDS_LAT_FRA_GNAME_26    "Hégésippe"
+    IDS_LAT_FRA_GNAME_27    "Ignat"
+    IDS_LAT_FRA_GNAME_28    "Ignace"
+    IDS_LAT_FRA_GNAME_29    "Julien"
+    IDS_LAT_FRA_GNAME_30    "Jules"
+    IDS_LAT_FRA_GNAME_31    "Julie"
+    IDS_LAT_FRA_GNAME_32    "Justin"
+    IDS_LAT_FRA_GNAME_33    "Junien"
+    IDS_LAT_FRA_GNAME_34    "Laure"
+    IDS_LAT_FRA_GNAME_35    "Laurent"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_GNAME_36    "Lilian"
+    IDS_LAT_FRA_GNAME_37    "Luc"
+    IDS_LAT_FRA_GNAME_38    "Lucien"
+    IDS_LAT_FRA_GNAME_39    "Laury"
+    IDS_LAT_FRA_GNAME_40    "Marc"
+    IDS_LAT_FRA_GNAME_41    "Marcel"
+    IDS_LAT_FRA_GNAME_42    "Marius"
+    IDS_LAT_FRA_GNAME_43    "Maurice"
+    IDS_LAT_FRA_GNAME_44    "Maxime"
+    IDS_LAT_FRA_GNAME_45    "Narcisse"
+    IDS_LAT_FRA_GNAME_46    "Octave"
+    IDS_LAT_FRA_GNAME_47    "Olivier"
+    IDS_LAT_FRA_GNAME_48    "Paul"
+    IDS_LAT_FRA_GNAME_49    "Pierre"
+    IDS_LAT_FRA_GNAME_50    "Quentin"
+    IDS_LAT_FRA_GNAME_51    "Quinctile"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_GNAME_52    "Quint"
+    IDS_LAT_FRA_GNAME_53    "Quintilien"
+    IDS_LAT_FRA_GNAME_54    "Quintille"
+    IDS_LAT_FRA_GNAME_55    "Régis"
+    IDS_LAT_FRA_GNAME_56    "Romain"
+    IDS_LAT_FRA_GNAME_57    "Rémi"
+    IDS_LAT_FRA_GNAME_58    "Rémy "
+    IDS_LAT_FRA_GNAME_59    "Sabin"
+    IDS_LAT_FRA_GNAME_60    "Sixte"
+    IDS_LAT_FRA_GNAME_61    "Sylvain"
+    IDS_LAT_FRA_GNAME_62    "Sylvie"
+    IDS_LAT_FRA_GNAME_63    "Saturnin"
+    IDS_LAT_FRA_GNAME_64    "Tibère"
+    IDS_LAT_FRA_GNAME_65    "Titien"
+    IDS_LAT_FRA_GNAME_66    "Ursicin"
+    IDS_LAT_FRA_GNAME_67    "Valère"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LAT_FRA_GNAME_68    "Valérie"
+    IDS_LAT_FRA_GNAME_69    "Victor"
+    IDS_LAT_FRA_GNAME_70    "Virgile"
+    IDS_LAT_FRA_GNAME_71    "Vivien"
+    IDS_LAT_FRA_GNAME_72    "Vincent"
+    IDS_LAT_FRA_GNAME_END   "法国名结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SLA_RUS_FNAME       "俄罗斯姓"
+    IDS_SLA_RUS_FNAME_1     "Smirnov"
+    IDS_SLA_RUS_FNAME_2     "Ivanov"
+    IDS_SLA_RUS_FNAME_3     "Kuznetsov"
+    IDS_SLA_RUS_FNAME_4     "Popov"
+    IDS_SLA_RUS_FNAME_5     "Sokolov"
+    IDS_SLA_RUS_FNAME_6     "Lebedev"
+    IDS_SLA_RUS_FNAME_7     "Kozlov"
+    IDS_SLA_RUS_FNAME_8     "Novikov"
+    IDS_SLA_RUS_FNAME_9     "Morozov"
+    IDS_SLA_RUS_FNAME_10    "Petrov"
+    IDS_SLA_RUS_FNAME_11    "Volkov"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SLA_RUS_FNAME_12    "Solovyov"
+    IDS_SLA_RUS_FNAME_13    "Vasilyev"
+    IDS_SLA_RUS_FNAME_14    "Zaytsev"
+    IDS_SLA_RUS_FNAME_15    "Pavlov"
+    IDS_SLA_RUS_FNAME_16    "Semyonov"
+    IDS_SLA_RUS_FNAME_17    "Golubev"
+    IDS_SLA_RUS_FNAME_18    "Vinogradov"
+    IDS_SLA_RUS_FNAME_19    "Bogdanov"
+    IDS_SLA_RUS_FNAME_20    "Vorobyov"
+    IDS_SLA_RUS_FNAME_END   "俄罗斯姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SLA_RUS_GNAME       "俄罗斯名"
+    IDS_SLA_RUS_GNAME_1     "Bogdan"
+    IDS_SLA_RUS_GNAME_2     "Boleslav"
+    IDS_SLA_RUS_GNAME_3     "Boris"
+    IDS_SLA_RUS_GNAME_4     "Borislav"
+    IDS_SLA_RUS_GNAME_5     "Bronislav"
+    IDS_SLA_RUS_GNAME_6     "Kazimir"
+    IDS_SLA_RUS_GNAME_7     "Iziaslav"
+    IDS_SLA_RUS_GNAME_8     "Milan"
+    IDS_SLA_RUS_GNAME_9     "Miloslav"
+    IDS_SLA_RUS_GNAME_10    "Miroslav"
+    IDS_SLA_RUS_GNAME_11    "Mstislav"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SLA_RUS_GNAME_12    "Radimir"
+    IDS_SLA_RUS_GNAME_13    "Radomir"
+    IDS_SLA_RUS_GNAME_14    "Radoslav"
+    IDS_SLA_RUS_GNAME_15    "Rostislav"
+    IDS_SLA_RUS_GNAME_16    "Stanislav"
+    IDS_SLA_RUS_GNAME_17    "Svyatopolk"
+    IDS_SLA_RUS_GNAME_18    "Svyatoslav"
+    IDS_SLA_RUS_GNAME_19    "Vadim"
+    IDS_SLA_RUS_GNAME_20    "Vlad"
+    IDS_SLA_RUS_GNAME_21    "Vladimir"
+    IDS_SLA_RUS_GNAME_22    "Vladislav"
+    IDS_SLA_RUS_GNAME_23    "Vsevolod"
+    IDS_SLA_RUS_GNAME_24    "Vyacheslav"
+    IDS_SLA_RUS_GNAME_25    "Yaroslav"
+    IDS_SLA_RUS_GNAME_END   "俄罗斯名结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SLA_UKR_FNAME       "乌克兰姓"
+    IDS_SLA_UKR_FNAME_1     "Melnik"
+    IDS_SLA_UKR_FNAME_2     "Shevchenko"
+    IDS_SLA_UKR_FNAME_3     "Boyko"
+    IDS_SLA_UKR_FNAME_4     "Kovalenko"
+    IDS_SLA_UKR_FNAME_5     "Bondarenko"
+    IDS_SLA_UKR_FNAME_6     "Tkachenko"
+    IDS_SLA_UKR_FNAME_7     "Kovalchuk"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SLA_UKR_FNAME_8     "Kravchenko"
+    IDS_SLA_UKR_FNAME_9     "Oliynyk"
+    IDS_SLA_UKR_FNAME_10    "Shevchuk"
+    IDS_SLA_UKR_FNAME_11    "Koval"
+    IDS_SLA_UKR_FNAME_12    "Polishchuk"
+    IDS_SLA_UKR_FNAME_13    "Bondar"
+    IDS_SLA_UKR_FNAME_14    "Tkachuk"
+    IDS_SLA_UKR_FNAME_15    "Moroz"
+    IDS_SLA_UKR_FNAME_16    "Marchenko"
+    IDS_SLA_UKR_FNAME_17    "Lisenko"
+    IDS_SLA_UKR_FNAME_18    "Rudenko"
+    IDS_SLA_UKR_FNAME_19    "Savchenko"
+    IDS_SLA_UKR_FNAME_20    "Petrenko"
+    IDS_SLA_UKR_FNAME_END   "乌克兰姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NDC_SWE_FNAME       "瑞典姓"
+    IDS_NDC_SWE_FNAME_1     "Johansson"
+    IDS_NDC_SWE_FNAME_2     "Andersson"
+    IDS_NDC_SWE_FNAME_3     "Karlsson"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NDC_SWE_FNAME_4     "Nilsson"
+    IDS_NDC_SWE_FNAME_5     "Eriksson"
+    IDS_NDC_SWE_FNAME_6     "Larsson"
+    IDS_NDC_SWE_FNAME_7     "Olsson"
+    IDS_NDC_SWE_FNAME_8     "Persson"
+    IDS_NDC_SWE_FNAME_9     "Svensson"
+    IDS_NDC_SWE_FNAME_10    "Gustafsson"
+    IDS_NDC_SWE_FNAME_11    "Pettersson"
+    IDS_NDC_SWE_FNAME_12    "Jonsson"
+    IDS_NDC_SWE_FNAME_13    "Jansson"
+    IDS_NDC_SWE_FNAME_14    "Hansson"
+    IDS_NDC_SWE_FNAME_15    "Bengtsson"
+    IDS_NDC_SWE_FNAME_16    "J?nsson"
+    IDS_NDC_SWE_FNAME_17    "Petersson"
+    IDS_NDC_SWE_FNAME_18    "Carlsson"
+    IDS_NDC_SWE_FNAME_19    "Lindberg"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NDC_SWE_FNAME_20    "Magnusson"
+    IDS_NDC_SWE_FNAME_END   "瑞典姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAB0                "全局"
+    IDS_TAB1                "名字"
+    IDS_TAB2                "国家"
+    IDS_TAB3                "技能"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TAB4                "特质"
+    IDS_TAB5                "头像"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING400           "无"
+    IDS_STRING401           "导入设置"
+    IDS_STRING402           "导出设置"
+    IDS_STRING410           "名字标签页"
+    IDS_STRING411           "姓"
+    IDS_STRING412           "名字"
+    IDS_STRING413           "使用汉字"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING420           "国家标签页"
+    IDS_STRING421           "兼容自建国"
+    IDS_STRING430           "技能标签页"
+    IDS_STRING431           "资质显示在姓名前"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING432           "资质最大值"
+    IDS_STRING433           "将领资质最大值随机化"
+    IDS_STRING441           "没有保守派"
+    IDS_STRING442           "兼容FTM"
+    IDS_STRING443           "自定义将领特技组"
+    IDS_STRING444           "最大特技个数"
+    IDS_STRING445           "将领特技个数服从"
+    IDS_STRING446           "平均分布"
+    IDS_STRING447           "正态分布"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING448           "没有分布"
+    IDS_STRING449           "reserved"
+    IDS_STRING451           "顺序生成"
+    IDS_STRING452           "使用现有将领头像"
+    IDS_STRING453           "头像ID号(不含L)"
+    IDS_STRING454           "使用同一个头像"
+    IDS_STRING455           "生成"
+    IDS_STRING456           "使用现有"
+    IDS_STRING457           " reserved"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING501           "数据格式错误！"
+    IDS_STRING502           "Leaders.txt文件创建失败！"
+    IDS_STRING503           "起始ID大于终止ID！"
+    IDS_STRING504           "国家代码不能为空！"
+    IDS_STRING505           "国家代码不存在！"
+    IDS_STRING506           "请输入将领数量！"
+    IDS_STRING507           "随机数生成出错！"
+    IDS_STRING508           "将领类型错误！"
+    IDS_STRING509           "请选择一种将领生成方式！"
+    IDS_STRING510           "将领数量超出可以生成的范围！"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING531           "Edit控件和Slider控件出错！"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME "中文姓开始"
+    IDS_HANZI_CJK_CHS_FNAME_1 "安"
+    IDS_HANZI_CJK_CHS_FNAME_2 "巴"
+    IDS_HANZI_CJK_CHS_FNAME_3 "白"
+    IDS_HANZI_CJK_CHS_FNAME_4 "蔡"
+    IDS_HANZI_CJK_CHS_FNAME_5 "常"
+    IDS_HANZI_CJK_CHS_FNAME_6 "陈"
+    IDS_HANZI_CJK_CHS_FNAME_7 "程"
+    IDS_HANZI_CJK_CHS_FNAME_8 "池"
+    IDS_HANZI_CJK_CHS_FNAME_9 "崔"
+    IDS_HANZI_CJK_CHS_FNAME_10 "戴"
+    IDS_HANZI_CJK_CHS_FNAME_11 "邓"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_12 "丁"
+    IDS_HANZI_CJK_CHS_FNAME_13 "董"
+    IDS_HANZI_CJK_CHS_FNAME_14 "杜"
+    IDS_HANZI_CJK_CHS_FNAME_15 "段"
+    IDS_HANZI_CJK_CHS_FNAME_16 "范"
+    IDS_HANZI_CJK_CHS_FNAME_17 "方"
+    IDS_HANZI_CJK_CHS_FNAME_18 "冯"
+    IDS_HANZI_CJK_CHS_FNAME_19 "傅"
+    IDS_HANZI_CJK_CHS_FNAME_20 "盖"
+    IDS_HANZI_CJK_CHS_FNAME_21 "甘"
+    IDS_HANZI_CJK_CHS_FNAME_22 "高"
+    IDS_HANZI_CJK_CHS_FNAME_23 "葛"
+    IDS_HANZI_CJK_CHS_FNAME_24 "古"
+    IDS_HANZI_CJK_CHS_FNAME_25 "谷"
+    IDS_HANZI_CJK_CHS_FNAME_26 "顾"
+    IDS_HANZI_CJK_CHS_FNAME_27 "关"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_28 "桂"
+    IDS_HANZI_CJK_CHS_FNAME_29 "郭"
+    IDS_HANZI_CJK_CHS_FNAME_30 "哈"
+    IDS_HANZI_CJK_CHS_FNAME_31 "韩"
+    IDS_HANZI_CJK_CHS_FNAME_32 "郝"
+    IDS_HANZI_CJK_CHS_FNAME_33 "何"
+    IDS_HANZI_CJK_CHS_FNAME_34 "贺"
+    IDS_HANZI_CJK_CHS_FNAME_35 "赫"
+    IDS_HANZI_CJK_CHS_FNAME_36 "侯"
+    IDS_HANZI_CJK_CHS_FNAME_37 "胡"
+    IDS_HANZI_CJK_CHS_FNAME_38 "扈"
+    IDS_HANZI_CJK_CHS_FNAME_39 "黄"
+    IDS_HANZI_CJK_CHS_FNAME_40 "霍"
+    IDS_HANZI_CJK_CHS_FNAME_41 "吉"
+    IDS_HANZI_CJK_CHS_FNAME_42 "姜"
+    IDS_HANZI_CJK_CHS_FNAME_43 "蒋"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_44 "解"
+    IDS_HANZI_CJK_CHS_FNAME_45 "金"
+    IDS_HANZI_CJK_CHS_FNAME_46 "阚"
+    IDS_HANZI_CJK_CHS_FNAME_47 "孔"
+    IDS_HANZI_CJK_CHS_FNAME_48 "赖"
+    IDS_HANZI_CJK_CHS_FNAME_49 "乐"
+    IDS_HANZI_CJK_CHS_FNAME_50 "雷"
+    IDS_HANZI_CJK_CHS_FNAME_51 "冷"
+    IDS_HANZI_CJK_CHS_FNAME_52 "李"
+    IDS_HANZI_CJK_CHS_FNAME_53 "梁"
+    IDS_HANZI_CJK_CHS_FNAME_54 "廖"
+    IDS_HANZI_CJK_CHS_FNAME_55 "林"
+    IDS_HANZI_CJK_CHS_FNAME_56 "刘"
+    IDS_HANZI_CJK_CHS_FNAME_57 "柳"
+    IDS_HANZI_CJK_CHS_FNAME_58 "龙"
+    IDS_HANZI_CJK_CHS_FNAME_59 "卢"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_60 "鲁"
+    IDS_HANZI_CJK_CHS_FNAME_61 "鹿"
+    IDS_HANZI_CJK_CHS_FNAME_62 "吕"
+    IDS_HANZI_CJK_CHS_FNAME_63 "罗"
+    IDS_HANZI_CJK_CHS_FNAME_64 "毛"
+    IDS_HANZI_CJK_CHS_FNAME_65 "米"
+    IDS_HANZI_CJK_CHS_FNAME_66 "牟"
+    IDS_HANZI_CJK_CHS_FNAME_67 "聂"
+    IDS_HANZI_CJK_CHS_FNAME_68 "欧"
+    IDS_HANZI_CJK_CHS_FNAME_69 "潘"
+    IDS_HANZI_CJK_CHS_FNAME_70 "庞"
+    IDS_HANZI_CJK_CHS_FNAME_71 "裴"
+    IDS_HANZI_CJK_CHS_FNAME_72 "彭"
+    IDS_HANZI_CJK_CHS_FNAME_73 "齐"
+    IDS_HANZI_CJK_CHS_FNAME_74 "钱"
+    IDS_HANZI_CJK_CHS_FNAME_75 "秦"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_76 "邱"
+    IDS_HANZI_CJK_CHS_FNAME_77 "区"
+    IDS_HANZI_CJK_CHS_FNAME_78 "饶"
+    IDS_HANZI_CJK_CHS_FNAME_79 "荣"
+    IDS_HANZI_CJK_CHS_FNAME_80 "容"
+    IDS_HANZI_CJK_CHS_FNAME_81 "萨"
+    IDS_HANZI_CJK_CHS_FNAME_82 "商"
+    IDS_HANZI_CJK_CHS_FNAME_83 "邵"
+    IDS_HANZI_CJK_CHS_FNAME_84 "沈"
+    IDS_HANZI_CJK_CHS_FNAME_85 "盛"
+    IDS_HANZI_CJK_CHS_FNAME_86 "石"
+    IDS_HANZI_CJK_CHS_FNAME_87 "史"
+    IDS_HANZI_CJK_CHS_FNAME_88 "宋"
+    IDS_HANZI_CJK_CHS_FNAME_89 "苏"
+    IDS_HANZI_CJK_CHS_FNAME_90 "粟"
+    IDS_HANZI_CJK_CHS_FNAME_91 "孙"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_92 "覃"
+    IDS_HANZI_CJK_CHS_FNAME_93 "谭"
+    IDS_HANZI_CJK_CHS_FNAME_94 "汤"
+    IDS_HANZI_CJK_CHS_FNAME_95 "唐"
+    IDS_HANZI_CJK_CHS_FNAME_96 "陶"
+    IDS_HANZI_CJK_CHS_FNAME_97 "滕"
+    IDS_HANZI_CJK_CHS_FNAME_98 "田"
+    IDS_HANZI_CJK_CHS_FNAME_99 "佟"
+    IDS_HANZI_CJK_CHS_FNAME_100 "万"
+    IDS_HANZI_CJK_CHS_FNAME_101 "汪"
+    IDS_HANZI_CJK_CHS_FNAME_102 "王"
+    IDS_HANZI_CJK_CHS_FNAME_103 "韦"
+    IDS_HANZI_CJK_CHS_FNAME_104 "卫"
+    IDS_HANZI_CJK_CHS_FNAME_105 "魏"
+    IDS_HANZI_CJK_CHS_FNAME_106 "文"
+    IDS_HANZI_CJK_CHS_FNAME_107 "乌"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_108 "吴"
+    IDS_HANZI_CJK_CHS_FNAME_109 "武"
+    IDS_HANZI_CJK_CHS_FNAME_110 "夏"
+    IDS_HANZI_CJK_CHS_FNAME_111 "向"
+    IDS_HANZI_CJK_CHS_FNAME_112 "项"
+    IDS_HANZI_CJK_CHS_FNAME_113 "萧"
+    IDS_HANZI_CJK_CHS_FNAME_114 "肖"
+    IDS_HANZI_CJK_CHS_FNAME_115 "谢"
+    IDS_HANZI_CJK_CHS_FNAME_116 "徐"
+    IDS_HANZI_CJK_CHS_FNAME_117 "许"
+    IDS_HANZI_CJK_CHS_FNAME_118 "宣"
+    IDS_HANZI_CJK_CHS_FNAME_119 "薛"
+    IDS_HANZI_CJK_CHS_FNAME_120 "亚"
+    IDS_HANZI_CJK_CHS_FNAME_121 "阎"
+    IDS_HANZI_CJK_CHS_FNAME_122 "杨"
+    IDS_HANZI_CJK_CHS_FNAME_123 "姚"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_124 "叶"
+    IDS_HANZI_CJK_CHS_FNAME_125 "易"
+    IDS_HANZI_CJK_CHS_FNAME_126 "尤"
+    IDS_HANZI_CJK_CHS_FNAME_127 "余"
+    IDS_HANZI_CJK_CHS_FNAME_128 "俞"
+    IDS_HANZI_CJK_CHS_FNAME_129 "袁"
+    IDS_HANZI_CJK_CHS_FNAME_130 "苑"
+    IDS_HANZI_CJK_CHS_FNAME_131 "曾"
+    IDS_HANZI_CJK_CHS_FNAME_132 "张"
+    IDS_HANZI_CJK_CHS_FNAME_133 "赵"
+    IDS_HANZI_CJK_CHS_FNAME_134 "郑"
+    IDS_HANZI_CJK_CHS_FNAME_135 "钟"
+    IDS_HANZI_CJK_CHS_FNAME_136 "周"
+    IDS_HANZI_CJK_CHS_FNAME_137 "朱"
+    IDS_HANZI_CJK_CHS_FNAME_138 "祝"
+    IDS_HANZI_CJK_CHS_FNAME_139 "邹"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_FNAME_140 "左"
+    IDS_HANZI_CJK_CHS_FNAME_END "中文姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME "中文名开始"
+    IDS_HANZI_CJK_CHS_GNAME_1 "安宝"
+    IDS_HANZI_CJK_CHS_GNAME_2 "策"
+    IDS_HANZI_CJK_CHS_GNAME_3 "昌浩"
+    IDS_HANZI_CJK_CHS_GNAME_4 "长捷"
+    IDS_HANZI_CJK_CHS_GNAME_5 "诚"
+    IDS_HANZI_CJK_CHS_GNAME_6 "崇禧"
+    IDS_HANZI_CJK_CHS_GNAME_7 "大庆"
+    IDS_HANZI_CJK_CHS_GNAME_8 "恩多"
+    IDS_HANZI_CJK_CHS_GNAME_9 "峰城"
+    IDS_HANZI_CJK_CHS_GNAME_10 "赓"
+    IDS_HANZI_CJK_CHS_GNAME_11 "公侠"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_12 "光"
+    IDS_HANZI_CJK_CHS_GNAME_13 "季良"
+    IDS_HANZI_CJK_CHS_GNAME_14 "济桓"
+    IDS_HANZI_CJK_CHS_GNAME_15 "济棠"
+    IDS_HANZI_CJK_CHS_GNAME_16 "孟坚"
+    IDS_HANZI_CJK_CHS_GNAME_17 "明仁"
+    IDS_HANZI_CJK_CHS_GNAME_18 "纳德"
+    IDS_HANZI_CJK_CHS_GNAME_19 "栖霞"
+    IDS_HANZI_CJK_CHS_GNAME_20 "乾坤"
+    IDS_HANZI_CJK_CHS_GNAME_21 "潜"
+    IDS_HANZI_CJK_CHS_GNAME_22 "庆云"
+    IDS_HANZI_CJK_CHS_GNAME_23 "瑞钿"
+    IDS_HANZI_CJK_CHS_GNAME_24 "善烨"
+    IDS_HANZI_CJK_CHS_GNAME_25 "绍宽"
+    IDS_HANZI_CJK_CHS_GNAME_26 "铁"
+    IDS_HANZI_CJK_CHS_GNAME_27 "廷锴"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_28 "万仞"
+    IDS_HANZI_CJK_CHS_GNAME_29 "文杞"
+    IDS_HANZI_CJK_CHS_GNAME_30 "熙"
+    IDS_HANZI_CJK_CHS_GNAME_31 "毅"
+    IDS_HANZI_CJK_CHS_GNAME_32 "颖春"
+    IDS_HANZI_CJK_CHS_GNAME_33 "云英"
+    IDS_HANZI_CJK_CHS_GNAME_34 "志敏"
+    IDS_HANZI_CJK_CHS_GNAME_35 "安澜"
+    IDS_HANZI_CJK_CHS_GNAME_36 "笠"
+    IDS_HANZI_CJK_CHS_GNAME_37 "峙"
+    IDS_HANZI_CJK_CHS_GNAME_38 "宝珊"
+    IDS_HANZI_CJK_CHS_GNAME_39 "定远"
+    IDS_HANZI_CJK_CHS_GNAME_40 "锡侯"
+    IDS_HANZI_CJK_CHS_GNAME_41 "小平"
+    IDS_HANZI_CJK_CHS_GNAME_42 "子恢"
+    IDS_HANZI_CJK_CHS_GNAME_43 "玲"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_44 "治磐"
+    IDS_HANZI_CJK_CHS_GNAME_45 "从善"
+    IDS_HANZI_CJK_CHS_GNAME_46 "其武"
+    IDS_HANZI_CJK_CHS_GNAME_47 "聿明"
+    IDS_HANZI_CJK_CHS_GNAME_48 "沄"
+    IDS_HANZI_CJK_CHS_GNAME_49 "汉杰"
+    IDS_HANZI_CJK_CHS_GNAME_50 "槐"
+    IDS_HANZI_CJK_CHS_GNAME_51 "靖"
+    IDS_HANZI_CJK_CHS_GNAME_52 "叔洪"
+    IDS_HANZI_CJK_CHS_GNAME_53 "天"
+    IDS_HANZI_CJK_CHS_GNAME_54 "先觉"
+    IDS_HANZI_CJK_CHS_GNAME_55 "子翼"
+    IDS_HANZI_CJK_CHS_GNAME_56 "安邦"
+    IDS_HANZI_CJK_CHS_GNAME_57 "钦哉"
+    IDS_HANZI_CJK_CHS_GNAME_58 "圣法"
+    IDS_HANZI_CJK_CHS_GNAME_59 "玉祥"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_60 "治安"
+    IDS_HANZI_CJK_CHS_GNAME_61 "秉勋"
+    IDS_HANZI_CJK_CHS_GNAME_62 "作义"
+    IDS_HANZI_CJK_CHS_GNAME_63 "伊"
+    IDS_HANZI_CJK_CHS_GNAME_64 "丽初"
+    IDS_HANZI_CJK_CHS_GNAME_65 "岗"
+    IDS_HANZI_CJK_CHS_GNAME_66 "桂滋"
+    IDS_HANZI_CJK_CHS_GNAME_67 "魁元"
+    IDS_HANZI_CJK_CHS_GNAME_68 "树勋"
+    IDS_HANZI_CJK_CHS_GNAME_69 "双城"
+    IDS_HANZI_CJK_CHS_GNAME_70 "宪申"
+    IDS_HANZI_CJK_CHS_GNAME_71 "志航"
+    IDS_HANZI_CJK_CHS_GNAME_72 "致嵩"
+    IDS_HANZI_CJK_CHS_GNAME_73 "先才"
+    IDS_HANZI_CJK_CHS_GNAME_74 "鼎华"
+    IDS_HANZI_CJK_CHS_GNAME_75 "正伦"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_76 "祝同"
+    IDS_HANZI_CJK_CHS_GNAME_77 "麟征"
+    IDS_HANZI_CJK_CHS_GNAME_78 "永清"
+    IDS_HANZI_CJK_CHS_GNAME_79 "泽准"
+    IDS_HANZI_CJK_CHS_GNAME_80 "忏"
+    IDS_HANZI_CJK_CHS_GNAME_81 "寄峤"
+    IDS_HANZI_CJK_CHS_GNAME_82 "景云"
+    IDS_HANZI_CJK_CHS_GNAME_83 "履洲"
+    IDS_HANZI_CJK_CHS_GNAME_84 "汝栋"
+    IDS_HANZI_CJK_CHS_GNAME_85 "勋祺"
+    IDS_HANZI_CJK_CHS_GNAME_86 "宗汾"
+    IDS_HANZI_CJK_CHS_GNAME_87 "玉良"
+    IDS_HANZI_CJK_CHS_GNAME_88 "复渠"
+    IDS_HANZI_CJK_CHS_GNAME_89 "浚"
+    IDS_HANZI_CJK_CHS_GNAME_90 "练成"
+    IDS_HANZI_CJK_CHS_GNAME_91 "梦龄"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_92 "基沣"
+    IDS_HANZI_CJK_CHS_GNAME_93 "绍周"
+    IDS_HANZI_CJK_CHS_GNAME_94 "文鼎"
+    IDS_HANZI_CJK_CHS_GNAME_95 "应钦"
+    IDS_HANZI_CJK_CHS_GNAME_96 "柱国"
+    IDS_HANZI_CJK_CHS_GNAME_97 "国光"
+    IDS_HANZI_CJK_CHS_GNAME_98 "龙"
+    IDS_HANZI_CJK_CHS_GNAME_99 "维珍"
+    IDS_HANZI_CJK_CHS_GNAME_100 "耀祖"
+    IDS_HANZI_CJK_CHS_GNAME_101 "里平"
+    IDS_HANZI_CJK_CHS_GNAME_102 "留金"
+    IDS_HANZI_CJK_CHS_GNAME_103 "镜如"
+    IDS_HANZI_CJK_CHS_GNAME_104 "长青"
+    IDS_HANZI_CJK_CHS_GNAME_105 "琏"
+    IDS_HANZI_CJK_CHS_GNAME_106 "若愚"
+    IDS_HANZI_CJK_CHS_GNAME_107 "素"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_108 "义宾"
+    IDS_HANZI_CJK_CHS_GNAME_109 "瑛"
+    IDS_HANZI_CJK_CHS_GNAME_110 "志明"
+    IDS_HANZI_CJK_CHS_GNAME_111 "宗南"
+    IDS_HANZI_CJK_CHS_GNAME_112 "先梅"
+    IDS_HANZI_CJK_CHS_GNAME_113 "八妹"
+    IDS_HANZI_CJK_CHS_GNAME_114 "秉衡"
+    IDS_HANZI_CJK_CHS_GNAME_115 "伯韬"
+    IDS_HANZI_CJK_CHS_GNAME_116 "光锐"
+    IDS_HANZI_CJK_CHS_GNAME_117 "国梁"
+    IDS_HANZI_CJK_CHS_GNAME_118 "杰"
+    IDS_HANZI_CJK_CHS_GNAME_119 "克诚"
+    IDS_HANZI_CJK_CHS_GNAME_120 "梅兴"
+    IDS_HANZI_CJK_CHS_GNAME_121 "琪翔"
+    IDS_HANZI_CJK_CHS_GNAME_122 "樵松"
+    IDS_HANZI_CJK_CHS_GNAME_123 "绍竑"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_124 "涛"
+    IDS_HANZI_CJK_CHS_GNAME_125 "维"
+    IDS_HANZI_CJK_CHS_GNAME_126 "显声"
+    IDS_HANZI_CJK_CHS_GNAME_127 "永安"
+    IDS_HANZI_CJK_CHS_GNAME_128 "珍吾"
+    IDS_HANZI_CJK_CHS_GNAME_129 "夫曼"
+    IDS_HANZI_CJK_CHS_GNAME_130 "揆彰"
+    IDS_HANZI_CJK_CHS_GNAME_131 "星文"
+    IDS_HANZI_CJK_CHS_GNAME_132 "章简"
+    IDS_HANZI_CJK_CHS_GNAME_133 "玉贞"
+    IDS_HANZI_CJK_CHS_GNAME_134 "鼎文"
+    IDS_HANZI_CJK_CHS_GNAME_135 "光鼐"
+    IDS_HANZI_CJK_CHS_GNAME_136 "介石"
+    IDS_HANZI_CJK_CHS_GNAME_137 "有芬"
+    IDS_HANZI_CJK_CHS_GNAME_138 "志英"
+    IDS_HANZI_CJK_CHS_GNAME_139 "方"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_140 "日成"
+    IDS_HANZI_CJK_CHS_GNAME_141 "武亭"
+    IDS_HANZI_CJK_CHS_GNAME_142 "学奎"
+    IDS_HANZI_CJK_CHS_GNAME_143 "仲春"
+    IDS_HANZI_CJK_CHS_GNAME_144 "维雍"
+    IDS_HANZI_CJK_CHS_GNAME_145 "从周"
+    IDS_HANZI_CJK_CHS_GNAME_146 "传湘"
+    IDS_HANZI_CJK_CHS_GNAME_147 "以琴"
+    IDS_HANZI_CJK_CHS_GNAME_148 "忠"
+    IDS_HANZI_CJK_CHS_GNAME_149 "欣"
+    IDS_HANZI_CJK_CHS_GNAME_150 "必蕃"
+    IDS_HANZI_CJK_CHS_GNAME_151 "春浓"
+    IDS_HANZI_CJK_CHS_GNAME_152 "德"
+    IDS_HANZI_CJK_CHS_GNAME_153 "范奭"
+    IDS_HANZI_CJK_CHS_GNAME_154 "服膺"
+    IDS_HANZI_CJK_CHS_GNAME_155 "桂丹"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_156 "汉魂"
+    IDS_HANZI_CJK_CHS_GNAME_157 "济深"
+    IDS_HANZI_CJK_CHS_GNAME_158 "家钰"
+    IDS_HANZI_CJK_CHS_GNAME_159 "觉"
+    IDS_HANZI_CJK_CHS_GNAME_160 "弥"
+    IDS_HANZI_CJK_CHS_GNAME_161 "明灏"
+    IDS_HANZI_CJK_CHS_GNAME_162 "默庵"
+    IDS_HANZI_CJK_CHS_GNAME_163 "品仙"
+    IDS_HANZI_CJK_CHS_GNAME_164 "世甲"
+    IDS_HANZI_CJK_CHS_GNAME_165 "涛"
+    IDS_HANZI_CJK_CHS_GNAME_166 "天霞"
+    IDS_HANZI_CJK_CHS_GNAME_167 "文"
+    IDS_HANZI_CJK_CHS_GNAME_168 "文田"
+    IDS_HANZI_CJK_CHS_GNAME_169 "仙洲"
+    IDS_HANZI_CJK_CHS_GNAME_170 "先念"
+    IDS_HANZI_CJK_CHS_GNAME_171 "延年"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_172 "以劻"
+    IDS_HANZI_CJK_CHS_GNAME_173 "友邦"
+    IDS_HANZI_CJK_CHS_GNAME_174 "玉堂"
+    IDS_HANZI_CJK_CHS_GNAME_175 "则芬"
+    IDS_HANZI_CJK_CHS_GNAME_176 "贞"
+    IDS_HANZI_CJK_CHS_GNAME_177 "振"
+    IDS_HANZI_CJK_CHS_GNAME_178 "振球"
+    IDS_HANZI_CJK_CHS_GNAME_179 "宗仁"
+    IDS_HANZI_CJK_CHS_GNAME_180 "镜斋"
+    IDS_HANZI_CJK_CHS_GNAME_181 "添成"
+    IDS_HANZI_CJK_CHS_GNAME_182 "希贤"
+    IDS_HANZI_CJK_CHS_GNAME_183 "磊"
+    IDS_HANZI_CJK_CHS_GNAME_184 "龄奇"
+    IDS_HANZI_CJK_CHS_GNAME_185 "耀湘"
+    IDS_HANZI_CJK_CHS_GNAME_186 "运泽"
+    IDS_HANZI_CJK_CHS_GNAME_187 "运周"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_188 "彪"
+    IDS_HANZI_CJK_CHS_GNAME_189 "德曼"
+    IDS_HANZI_CJK_CHS_GNAME_190 "蔚"
+    IDS_HANZI_CJK_CHS_GNAME_191 "安祺"
+    IDS_HANZI_CJK_CHS_GNAME_192 "斌"
+    IDS_HANZI_CJK_CHS_GNAME_193 "伯承"
+    IDS_HANZI_CJK_CHS_GNAME_194 "粹刚"
+    IDS_HANZI_CJK_CHS_GNAME_195 "多荃"
+    IDS_HANZI_CJK_CHS_GNAME_196 "广济"
+    IDS_HANZI_CJK_CHS_GNAME_197 "桂五"
+    IDS_HANZI_CJK_CHS_GNAME_198 "国运"
+    IDS_HANZI_CJK_CHS_GNAME_199 "和鼎"
+    IDS_HANZI_CJK_CHS_GNAME_200 "家骐"
+    IDS_HANZI_CJK_CHS_GNAME_201 "嘉树"
+    IDS_HANZI_CJK_CHS_GNAME_202 "建绪"
+    IDS_HANZI_CJK_CHS_GNAME_203 "戡"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_204 "廉一"
+    IDS_HANZI_CJK_CHS_GNAME_205 "茂恩"
+    IDS_HANZI_CJK_CHS_GNAME_206 "牧群"
+    IDS_HANZI_CJK_CHS_GNAME_207 "汝明"
+    IDS_HANZI_CJK_CHS_GNAME_208 "士毅"
+    IDS_HANZI_CJK_CHS_GNAME_209 "炜"
+    IDS_HANZI_CJK_CHS_GNAME_210 "文辉"
+    IDS_HANZI_CJK_CHS_GNAME_211 "湘"
+    IDS_HANZI_CJK_CHS_GNAME_212 "兴"
+    IDS_HANZI_CJK_CHS_GNAME_213 "亚楼"
+    IDS_HANZI_CJK_CHS_GNAME_214 "永诰"
+    IDS_HANZI_CJK_CHS_GNAME_215 "兆藜"
+    IDS_HANZI_CJK_CHS_GNAME_216 "震"
+    IDS_HANZI_CJK_CHS_GNAME_217 "震东"
+    IDS_HANZI_CJK_CHS_GNAME_218 "志丹"
+    IDS_HANZI_CJK_CHS_GNAME_219 "峙"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_220 "哲生"
+    IDS_HANZI_CJK_CHS_GNAME_221 "正欣"
+    IDS_HANZI_CJK_CHS_GNAME_222 "天武"
+    IDS_HANZI_CJK_CHS_GNAME_223 "云"
+    IDS_HANZI_CJK_CHS_GNAME_224 "广伟"
+    IDS_HANZI_CJK_CHS_GNAME_225 "汉"
+    IDS_HANZI_CJK_CHS_GNAME_226 "浚泉"
+    IDS_HANZI_CJK_CHS_GNAME_227 "道源"
+    IDS_HANZI_CJK_CHS_GNAME_228 "丁"
+    IDS_HANZI_CJK_CHS_GNAME_229 "钟麟"
+    IDS_HANZI_CJK_CHS_GNAME_230 "黎平"
+    IDS_HANZI_CJK_CHS_GNAME_231 "旃蒙"
+    IDS_HANZI_CJK_CHS_GNAME_232 "炳辉"
+    IDS_HANZI_CJK_CHS_GNAME_233 "广文"
+    IDS_HANZI_CJK_CHS_GNAME_234 "历戎"
+    IDS_HANZI_CJK_CHS_GNAME_235 "列"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_236 "荣桓"
+    IDS_HANZI_CJK_CHS_GNAME_237 "瑞卿"
+    IDS_HANZI_CJK_CHS_GNAME_238 "恕人"
+    IDS_HANZI_CJK_CHS_GNAME_239 "湘涛"
+    IDS_HANZI_CJK_CHS_GNAME_240 "卓英"
+    IDS_HANZI_CJK_CHS_GNAME_241 "邦初"
+    IDS_HANZI_CJK_CHS_GNAME_242 "秉文"
+    IDS_HANZI_CJK_CHS_GNAME_243 "泽东"
+    IDS_HANZI_CJK_CHS_GNAME_244 "尔金"
+    IDS_HANZI_CJK_CHS_GNAME_245 "中珩"
+    IDS_HANZI_CJK_CHS_GNAME_246 "荣臻"
+    IDS_HANZI_CJK_CHS_GNAME_247 "阳格"
+    IDS_HANZI_CJK_CHS_GNAME_248 "震"
+    IDS_HANZI_CJK_CHS_GNAME_249 "文华"
+    IDS_HANZI_CJK_CHS_GNAME_250 "炳勋"
+    IDS_HANZI_CJK_CHS_GNAME_251 "汉祯"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_252 "昌会"
+    IDS_HANZI_CJK_CHS_GNAME_253 "德怀"
+    IDS_HANZI_CJK_CHS_GNAME_254 "士量"
+    IDS_HANZI_CJK_CHS_GNAME_255 "雪枫"
+    IDS_HANZI_CJK_CHS_GNAME_256 "子谨"
+    IDS_HANZI_CJK_CHS_GNAME_257 "学启"
+    IDS_HANZI_CJK_CHS_GNAME_258 "大钧"
+    IDS_HANZI_CJK_CHS_GNAME_259 "德纯"
+    IDS_HANZI_CJK_CHS_GNAME_260 "霖"
+    IDS_HANZI_CJK_CHS_GNAME_261 "开基"
+    IDS_HANZI_CJK_CHS_GNAME_262 "清泉"
+    IDS_HANZI_CJK_CHS_GNAME_263 "寿年"
+    IDS_HANZI_CJK_CHS_GNAME_264 "国华"
+    IDS_HANZI_CJK_CHS_GNAME_265 "祥"
+    IDS_HANZI_CJK_CHS_GNAME_266 "有略"
+    IDS_HANZI_CJK_CHS_GNAME_267 "师俊"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_268 "镇冰"
+    IDS_HANZI_CJK_CHS_GNAME_269 "震"
+    IDS_HANZI_CJK_CHS_GNAME_270 "云相"
+    IDS_HANZI_CJK_CHS_GNAME_271 "百昌"
+    IDS_HANZI_CJK_CHS_GNAME_272 "鸿烈"
+    IDS_HANZI_CJK_CHS_GNAME_273 "世才"
+    IDS_HANZI_CJK_CHS_GNAME_274 "世骐"
+    IDS_HANZI_CJK_CHS_GNAME_275 "文"
+    IDS_HANZI_CJK_CHS_GNAME_276 "敬亭"
+    IDS_HANZI_CJK_CHS_GNAME_277 "友三"
+    IDS_HANZI_CJK_CHS_GNAME_278 "祖德"
+    IDS_HANZI_CJK_CHS_GNAME_279 "泽波"
+    IDS_HANZI_CJK_CHS_GNAME_280 "希濂"
+    IDS_HANZI_CJK_CHS_GNAME_281 "哲元"
+    IDS_HANZI_CJK_CHS_GNAME_282 "炳文"
+    IDS_HANZI_CJK_CHS_GNAME_283 "祖馨"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_284 "裕"
+    IDS_HANZI_CJK_CHS_GNAME_285 "楚"
+    IDS_HANZI_CJK_CHS_GNAME_286 "渡"
+    IDS_HANZI_CJK_CHS_GNAME_287 "立人"
+    IDS_HANZI_CJK_CHS_GNAME_288 "连仲"
+    IDS_HANZI_CJK_CHS_GNAME_289 "明瑾"
+    IDS_HANZI_CJK_CHS_GNAME_290 "庆麟"
+    IDS_HANZI_CJK_CHS_GNAME_291 "桐萱"
+    IDS_HANZI_CJK_CHS_GNAME_292 "蔚如"
+    IDS_HANZI_CJK_CHS_GNAME_293 "元良"
+    IDS_HANZI_CJK_CHS_GNAME_294 "震"
+    IDS_HANZI_CJK_CHS_GNAME_295 "异之"
+    IDS_HANZI_CJK_CHS_GNAME_296 "震林"
+    IDS_HANZI_CJK_CHS_GNAME_297 "政"
+    IDS_HANZI_CJK_CHS_GNAME_298 "恩伯"
+    IDS_HANZI_CJK_CHS_GNAME_299 "执权"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_300 "淮源"
+    IDS_HANZI_CJK_CHS_GNAME_301 "聚五"
+    IDS_HANZI_CJK_CHS_GNAME_302 "生智"
+    IDS_HANZI_CJK_CHS_GNAME_303 "式遵"
+    IDS_HANZI_CJK_CHS_GNAME_304 "广"
+    IDS_HANZI_CJK_CHS_GNAME_305 "勇"
+    IDS_HANZI_CJK_CHS_GNAME_306 "峙岳"
+    IDS_HANZI_CJK_CHS_GNAME_307 "代远"
+    IDS_HANZI_CJK_CHS_GNAME_308 "镇南"
+    IDS_HANZI_CJK_CHS_GNAME_309 "麟阁"
+    IDS_HANZI_CJK_CHS_GNAME_310 "福麟"
+    IDS_HANZI_CJK_CHS_GNAME_311 "式炯"
+    IDS_HANZI_CJK_CHS_GNAME_312 "耀煌"
+    IDS_HANZI_CJK_CHS_GNAME_313 "精卫"
+    IDS_HANZI_CJK_CHS_GNAME_314 "春晖"
+    IDS_HANZI_CJK_CHS_GNAME_315 "东原"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_316 "凤山"
+    IDS_HANZI_CJK_CHS_GNAME_317 "光复"
+    IDS_HANZI_CJK_CHS_GNAME_318 "甲本"
+    IDS_HANZI_CJK_CHS_GNAME_319 "稼祥"
+    IDS_HANZI_CJK_CHS_GNAME_320 "剑岳"
+    IDS_HANZI_CJK_CHS_GNAME_321 "敬久"
+    IDS_HANZI_CJK_CHS_GNAME_322 "靖国"
+    IDS_HANZI_CJK_CHS_GNAME_323 "靖之"
+    IDS_HANZI_CJK_CHS_GNAME_324 "俊"
+    IDS_HANZI_CJK_CHS_GNAME_325 "凌云"
+    IDS_HANZI_CJK_CHS_GNAME_326 "陵基"
+    IDS_HANZI_CJK_CHS_GNAME_327 "铭章"
+    IDS_HANZI_CJK_CHS_GNAME_328 "寿廷"
+    IDS_HANZI_CJK_CHS_GNAME_329 "树声"
+    IDS_HANZI_CJK_CHS_GNAME_330 "天祥"
+    IDS_HANZI_CJK_CHS_GNAME_331 "万龄"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_332 "耀武"
+    IDS_HANZI_CJK_CHS_GNAME_333 "以哲"
+    IDS_HANZI_CJK_CHS_GNAME_334 "毅"
+    IDS_HANZI_CJK_CHS_GNAME_335 "肇智"
+    IDS_HANZI_CJK_CHS_GNAME_336 "治熙"
+    IDS_HANZI_CJK_CHS_GNAME_337 "缵绪"
+    IDS_HANZI_CJK_CHS_GNAME_338 "国清"
+    IDS_HANZI_CJK_CHS_GNAME_339 "立煌"
+    IDS_HANZI_CJK_CHS_GNAME_340 "凤岗"
+    IDS_HANZI_CJK_CHS_GNAME_341 "镇"
+    IDS_HANZI_CJK_CHS_GNAME_342 "强"
+    IDS_HANZI_CJK_CHS_GNAME_343 "静彬"
+    IDS_HANZI_CJK_CHS_GNAME_344 "兰夫"
+    IDS_HANZI_CJK_CHS_GNAME_345 "垂昆"
+    IDS_HANZI_CJK_CHS_GNAME_346 "继光"
+    IDS_HANZI_CJK_CHS_GNAME_347 "佩孚"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_348 "奇伟"
+    IDS_HANZI_CJK_CHS_GNAME_349 "绍周"
+    IDS_HANZI_CJK_CHS_GNAME_350 "熙志"
+    IDS_HANZI_CJK_CHS_GNAME_351 "士敏"
+    IDS_HANZI_CJK_CHS_GNAME_352 "伯勋"
+    IDS_HANZI_CJK_CHS_GNAME_353 "楚中"
+    IDS_HANZI_CJK_CHS_GNAME_354 "国璋"
+    IDS_HANZI_CJK_CHS_GNAME_355 "威"
+    IDS_HANZI_CJK_CHS_GNAME_356 "凤武"
+    IDS_HANZI_CJK_CHS_GNAME_357 "英"
+    IDS_HANZI_CJK_CHS_GNAME_358 "冀勉"
+    IDS_HANZI_CJK_CHS_GNAME_359 "毅肃"
+    IDS_HANZI_CJK_CHS_GNAME_360 "劲光"
+    IDS_HANZI_CJK_CHS_GNAME_361 "志楚"
+    IDS_HANZI_CJK_CHS_GNAME_362 "多夫"
+    IDS_HANZI_CJK_CHS_GNAME_363 "光达"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_364 "海东"
+    IDS_HANZI_CJK_CHS_GNAME_365 "焕升"
+    IDS_HANZI_CJK_CHS_GNAME_366 "积璋"
+    IDS_HANZI_CJK_CHS_GNAME_367 "景唐"
+    IDS_HANZI_CJK_CHS_GNAME_368 "汝诚"
+    IDS_HANZI_CJK_CHS_GNAME_369 "庭瑶"
+    IDS_HANZI_CJK_CHS_GNAME_370 "向前"
+    IDS_HANZI_CJK_CHS_GNAME_371 "永昌"
+    IDS_HANZI_CJK_CHS_GNAME_372 "有兴"
+    IDS_HANZI_CJK_CHS_GNAME_373 "源泉"
+    IDS_HANZI_CJK_CHS_GNAME_374 "祖善"
+    IDS_HANZI_CJK_CHS_GNAME_375 "祖贻"
+    IDS_HANZI_CJK_CHS_GNAME_376 "国璋"
+    IDS_HANZI_CJK_CHS_GNAME_377 "铁吾"
+    IDS_HANZI_CJK_CHS_GNAME_378 "岳"
+    IDS_HANZI_CJK_CHS_GNAME_379 "罗什"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_380 "锡山"
+    IDS_HANZI_CJK_CHS_GNAME_381 "爱源"
+    IDS_HANZI_CJK_CHS_GNAME_382 "伯涛"
+    IDS_HANZI_CJK_CHS_GNAME_383 "步飞"
+    IDS_HANZI_CJK_CHS_GNAME_384 "虎"
+    IDS_HANZI_CJK_CHS_GNAME_385 "虎城"
+    IDS_HANZI_CJK_CHS_GNAME_386 "杰"
+    IDS_HANZI_CJK_CHS_GNAME_387 "靖宇"
+    IDS_HANZI_CJK_CHS_GNAME_388 "森"
+    IDS_HANZI_CJK_CHS_GNAME_389 "尚昆"
+    IDS_HANZI_CJK_CHS_GNAME_390 "蔚"
+    IDS_HANZI_CJK_CHS_GNAME_391 "中英"
+    IDS_HANZI_CJK_CHS_GNAME_392 "成"
+    IDS_HANZI_CJK_CHS_GNAME_393 "飞"
+    IDS_HANZI_CJK_CHS_GNAME_394 "剑英"
+    IDS_HANZI_CJK_CHS_GNAME_395 "佩高"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_396 "挺"
+    IDS_HANZI_CJK_CHS_GNAME_397 "安华"
+    IDS_HANZI_CJK_CHS_GNAME_398 "得胜"
+    IDS_HANZI_CJK_CHS_GNAME_399 "程万"
+    IDS_HANZI_CJK_CHS_GNAME_400 "汉谋"
+    IDS_HANZI_CJK_CHS_GNAME_401 "济时"
+    IDS_HANZI_CJK_CHS_GNAME_402 "彬"
+    IDS_HANZI_CJK_CHS_GNAME_403 "凌云"
+    IDS_HANZI_CJK_CHS_GNAME_404 "以鼎"
+    IDS_HANZI_CJK_CHS_GNAME_405 "泽生"
+    IDS_HANZI_CJK_CHS_GNAME_406 "爱萍"
+    IDS_HANZI_CJK_CHS_GNAME_407 "弛"
+    IDS_HANZI_CJK_CHS_GNAME_408 "鼎成"
+    IDS_HANZI_CJK_CHS_GNAME_409 "笃伦"
+    IDS_HANZI_CJK_CHS_GNAME_410 "发奎"
+    IDS_HANZI_CJK_CHS_GNAME_411 "钫"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_412 "淦"
+    IDS_HANZI_CJK_CHS_GNAME_413 "国焘"
+    IDS_HANZI_CJK_CHS_GNAME_414 "克侠"
+    IDS_HANZI_CJK_CHS_GNAME_415 "灵甫"
+    IDS_HANZI_CJK_CHS_GNAME_416 "琴秋"
+    IDS_HANZI_CJK_CHS_GNAME_417 "世希"
+    IDS_HANZI_CJK_CHS_GNAME_418 "廷孟"
+    IDS_HANZI_CJK_CHS_GNAME_419 "希良"
+    IDS_HANZI_CJK_CHS_GNAME_420 "胥行"
+    IDS_HANZI_CJK_CHS_GNAME_421 "绪滋"
+    IDS_HANZI_CJK_CHS_GNAME_422 "学良"
+    IDS_HANZI_CJK_CHS_GNAME_423 "学思"
+    IDS_HANZI_CJK_CHS_GNAME_424 "雪中"
+    IDS_HANZI_CJK_CHS_GNAME_425 "炎"
+    IDS_HANZI_CJK_CHS_GNAME_426 "耀明"
+    IDS_HANZI_CJK_CHS_GNAME_427 "荫梧"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_428 "云逸"
+    IDS_HANZI_CJK_CHS_GNAME_429 "轸"
+    IDS_HANZI_CJK_CHS_GNAME_430 "镇"
+    IDS_HANZI_CJK_CHS_GNAME_431 "治中"
+    IDS_HANZI_CJK_CHS_GNAME_432 "自忠"
+    IDS_HANZI_CJK_CHS_GNAME_433 "承绶"
+    IDS_HANZI_CJK_CHS_GNAME_434 "登禹"
+    IDS_HANZI_CJK_CHS_GNAME_435 "国屏"
+    IDS_HANZI_CJK_CHS_GNAME_436 "家骧"
+    IDS_HANZI_CJK_CHS_GNAME_437 "尚志"
+    IDS_HANZI_CJK_CHS_GNAME_438 "寿山"
+    IDS_HANZI_CJK_CHS_GNAME_439 "锡章"
+    IDS_HANZI_CJK_CHS_GNAME_440 "一曼"
+    IDS_HANZI_CJK_CHS_GNAME_441 "道济"
+    IDS_HANZI_CJK_CHS_GNAME_442 "洞国"
+    IDS_HANZI_CJK_CHS_GNAME_443 "廷笈"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_444 "廷珍"
+    IDS_HANZI_CJK_CHS_GNAME_445 "作民"
+    IDS_HANZI_CJK_CHS_GNAME_446 "松"
+    IDS_HANZI_CJK_CHS_GNAME_447 "毅"
+    IDS_HANZI_CJK_CHS_GNAME_448 "恩来"
+    IDS_HANZI_CJK_CHS_GNAME_449 "福成"
+    IDS_HANZI_CJK_CHS_GNAME_450 "复"
+    IDS_HANZI_CJK_CHS_GNAME_451 "嘉彬"
+    IDS_HANZI_CJK_CHS_GNAME_452 "斓"
+    IDS_HANZI_CJK_CHS_GNAME_453 "庆祥"
+    IDS_HANZI_CJK_CHS_GNAME_454 "岩"
+    IDS_HANZI_CJK_CHS_GNAME_455 "至柔"
+    IDS_HANZI_CJK_CHS_GNAME_456 "志道"
+    IDS_HANZI_CJK_CHS_GNAME_457 "赤"
+    IDS_HANZI_CJK_CHS_GNAME_458 "德"
+    IDS_HANZI_CJK_CHS_GNAME_459 "鼎卿"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HANZI_CJK_CHS_GNAME_460 "怀冰"
+    IDS_HANZI_CJK_CHS_GNAME_461 "奇"
+    IDS_HANZI_CJK_CHS_GNAME_462 "绍良"
+    IDS_HANZI_CJK_CHS_GNAME_463 "致一"
+    IDS_HANZI_CJK_CHS_GNAME_464 "绍周"
+    IDS_HANZI_CJK_CHS_GNAME_465 "绍孟"
+    IDS_HANZI_CJK_CHS_GNAME_466 "作华"
+    IDS_HANZI_CJK_CHS_GNAME_467 "权"
+    IDS_HANZI_CJK_CHS_GNAME_END "中文名结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME       "中文姓开始"
+    IDS_CJK_CHS_FNAME_1     "An"
+    IDS_CJK_CHS_FNAME_2     "Ba"
+    IDS_CJK_CHS_FNAME_3     "Bai"
+    IDS_CJK_CHS_FNAME_4     "Baili"
+    IDS_CJK_CHS_FNAME_5     "Cai"
+    IDS_CJK_CHS_FNAME_6     "Chang"
+    IDS_CJK_CHS_FNAME_7     "Chanyu"
+    IDS_CJK_CHS_FNAME_8     "Chen"
+    IDS_CJK_CHS_FNAME_9     "Cheng"
+    IDS_CJK_CHS_FNAME_10    "Chi"
+    IDS_CJK_CHS_FNAME_11    "Chunyu"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_12    "Cui"
+    IDS_CJK_CHS_FNAME_13    "Dai"
+    IDS_CJK_CHS_FNAME_14    "Daxi"
+    IDS_CJK_CHS_FNAME_15    "Deng"
+    IDS_CJK_CHS_FNAME_16    "Ding"
+    IDS_CJK_CHS_FNAME_17    "Diwu"
+    IDS_CJK_CHS_FNAME_18    "Dong"
+    IDS_CJK_CHS_FNAME_19    "Dongfang"
+    IDS_CJK_CHS_FNAME_20    "Donggong"
+    IDS_CJK_CHS_FNAME_21    "Dongguo"
+    IDS_CJK_CHS_FNAME_22    "Dongli"
+    IDS_CJK_CHS_FNAME_23    "Du"
+    IDS_CJK_CHS_FNAME_24    "Duan"
+    IDS_CJK_CHS_FNAME_25    "Duangan"
+    IDS_CJK_CHS_FNAME_26    "Duanmu"
+    IDS_CJK_CHS_FNAME_27    "Dugu"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_28    "Fan"
+    IDS_CJK_CHS_FNAME_29    "Fang"
+    IDS_CJK_CHS_FNAME_30    "Feng"
+    IDS_CJK_CHS_FNAME_31    "Fu"
+    IDS_CJK_CHS_FNAME_32    "Gai"
+    IDS_CJK_CHS_FNAME_33    "Gan"
+    IDS_CJK_CHS_FNAME_34    "Gao"
+    IDS_CJK_CHS_FNAME_35    "Ge"
+    IDS_CJK_CHS_FNAME_36    "Gongbo"
+    IDS_CJK_CHS_FNAME_37    "Gongcheng"
+    IDS_CJK_CHS_FNAME_38    "Gonghu"
+    IDS_CJK_CHS_FNAME_39    "Gongjian"
+    IDS_CJK_CHS_FNAME_40    "Gongliang"
+    IDS_CJK_CHS_FNAME_41    "Gongmen"
+    IDS_CJK_CHS_FNAME_42    "Gongshan"
+    IDS_CJK_CHS_FNAME_43    "Gongshang"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_44    "Gongsun"
+    IDS_CJK_CHS_FNAME_45    "Gongxi"
+    IDS_CJK_CHS_FNAME_46    "Gongxi"
+    IDS_CJK_CHS_FNAME_47    "Gongyang"
+    IDS_CJK_CHS_FNAME_48    "Gongye"
+    IDS_CJK_CHS_FNAME_49    "Gongyi"
+    IDS_CJK_CHS_FNAME_50    "Gongyu"
+    IDS_CJK_CHS_FNAME_51    "Gongzhong"
+    IDS_CJK_CHS_FNAME_52    "Gongzu"
+    IDS_CJK_CHS_FNAME_53    "Gu"
+    IDS_CJK_CHS_FNAME_54    "Guan"
+    IDS_CJK_CHS_FNAME_55    "Guanqiu"
+    IDS_CJK_CHS_FNAME_56    "Gui"
+    IDS_CJK_CHS_FNAME_57    "Guliang"
+    IDS_CJK_CHS_FNAME_58    "Guo"
+    IDS_CJK_CHS_FNAME_59    "Ha"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_60    "Han"
+    IDS_CJK_CHS_FNAME_61    "Hao"
+    IDS_CJK_CHS_FNAME_62    "He"
+    IDS_CJK_CHS_FNAME_63    "Helian"
+    IDS_CJK_CHS_FNAME_64    "Hu"
+    IDS_CJK_CHS_FNAME_65    "Huang"
+    IDS_CJK_CHS_FNAME_66    "Huangfu"
+    IDS_CJK_CHS_FNAME_67    "Huo"
+    IDS_CJK_CHS_FNAME_68    "Huyan"
+    IDS_CJK_CHS_FNAME_69    "Ji"
+    IDS_CJK_CHS_FNAME_70    "Jiagu"
+    IDS_CJK_CHS_FNAME_71    "Jiang"
+    IDS_CJK_CHS_FNAME_72    "Jie"
+    IDS_CJK_CHS_FNAME_73    "Jimo"
+    IDS_CJK_CHS_FNAME_74    "Jin"
+    IDS_CJK_CHS_FNAME_75    "Kong"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_76    "Lai"
+    IDS_CJK_CHS_FNAME_77    "Le"
+    IDS_CJK_CHS_FNAME_78    "Lei"
+    IDS_CJK_CHS_FNAME_79    "Leng"
+    IDS_CJK_CHS_FNAME_80    "Li"
+    IDS_CJK_CHS_FNAME_81    "Liang"
+    IDS_CJK_CHS_FNAME_82    "Liangqiu"
+    IDS_CJK_CHS_FNAME_83    "Liao"
+    IDS_CJK_CHS_FNAME_84    "Lin"
+    IDS_CJK_CHS_FNAME_85    "Linghu"
+    IDS_CJK_CHS_FNAME_86    "Liu"
+    IDS_CJK_CHS_FNAME_87    "Long"
+    IDS_CJK_CHS_FNAME_88    "Lu"
+    IDS_CJK_CHS_FNAME_89    "Luo"
+    IDS_CJK_CHS_FNAME_90    "Lv"
+    IDS_CJK_CHS_FNAME_91    "Lvqiu"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_92    "Mao"
+    IDS_CJK_CHS_FNAME_93    "Mi"
+    IDS_CJK_CHS_FNAME_94    "Moqi"
+    IDS_CJK_CHS_FNAME_95    "Mou"
+    IDS_CJK_CHS_FNAME_96    "Murong"
+    IDS_CJK_CHS_FNAME_97    "Nangong"
+    IDS_CJK_CHS_FNAME_98    "Nanmen"
+    IDS_CJK_CHS_FNAME_99    "Nanrong"
+    IDS_CJK_CHS_FNAME_100   "Nie"
+    IDS_CJK_CHS_FNAME_101   "Ou"
+    IDS_CJK_CHS_FNAME_102   "Ouyang"
+    IDS_CJK_CHS_FNAME_103   "Pan"
+    IDS_CJK_CHS_FNAME_104   "Pang"
+    IDS_CJK_CHS_FNAME_105   "Pei"
+    IDS_CJK_CHS_FNAME_106   "Peng"
+    IDS_CJK_CHS_FNAME_107   "Puyang"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_108   "Qi"
+    IDS_CJK_CHS_FNAME_109   "Qian"
+    IDS_CJK_CHS_FNAME_110   "Qidiao"
+    IDS_CJK_CHS_FNAME_111   "Qiguan"
+    IDS_CJK_CHS_FNAME_112   "Qin"
+    IDS_CJK_CHS_FNAME_113   "Qiu"
+    IDS_CJK_CHS_FNAME_114   "Qu"
+    IDS_CJK_CHS_FNAME_115   "Rangsi"
+    IDS_CJK_CHS_FNAME_116   "Rao"
+    IDS_CJK_CHS_FNAME_117   "Rong"
+    IDS_CJK_CHS_FNAME_118   "Sa"
+    IDS_CJK_CHS_FNAME_119   "Shang"
+    IDS_CJK_CHS_FNAME_120   "Shangguan"
+    IDS_CJK_CHS_FNAME_121   "Shao"
+    IDS_CJK_CHS_FNAME_122   "Shen"
+    IDS_CJK_CHS_FNAME_123   "Sheng"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_124   "Shentu"
+    IDS_CJK_CHS_FNAME_125   "Shi"
+    IDS_CJK_CHS_FNAME_126   "Sikong"
+    IDS_CJK_CHS_FNAME_127   "Sikou"
+    IDS_CJK_CHS_FNAME_128   "Sima"
+    IDS_CJK_CHS_FNAME_129   "Situ"
+    IDS_CJK_CHS_FNAME_130   "Song"
+    IDS_CJK_CHS_FNAME_131   "Su"
+    IDS_CJK_CHS_FNAME_132   "Sun"
+    IDS_CJK_CHS_FNAME_133   "Taishi"
+    IDS_CJK_CHS_FNAME_134   "Taishu"
+    IDS_CJK_CHS_FNAME_135   "Tan"
+    IDS_CJK_CHS_FNAME_136   "Tang"
+    IDS_CJK_CHS_FNAME_137   "Tantai"
+    IDS_CJK_CHS_FNAME_138   "Tao"
+    IDS_CJK_CHS_FNAME_139   "Teng"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_140   "Tian"
+    IDS_CJK_CHS_FNAME_141   "Tong"
+    IDS_CJK_CHS_FNAME_142   "Tuoba"
+    IDS_CJK_CHS_FNAME_143   "Wan"
+    IDS_CJK_CHS_FNAME_144   "Wang"
+    IDS_CJK_CHS_FNAME_145   "Wei"
+    IDS_CJK_CHS_FNAME_146   "Weisheng"
+    IDS_CJK_CHS_FNAME_147   "Wen"
+    IDS_CJK_CHS_FNAME_148   "Wenren"
+    IDS_CJK_CHS_FNAME_149   "Wu"
+    IDS_CJK_CHS_FNAME_150   "Wuma"
+    IDS_CJK_CHS_FNAME_151   "Xia"
+    IDS_CJK_CHS_FNAME_152   "Xiahou"
+    IDS_CJK_CHS_FNAME_153   "Xiang"
+    IDS_CJK_CHS_FNAME_154   "Xianyu"
+    IDS_CJK_CHS_FNAME_155   "Xiao"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_156   "Xie"
+    IDS_CJK_CHS_FNAME_157   "Ximen"
+    IDS_CJK_CHS_FNAME_158   "Xu"
+    IDS_CJK_CHS_FNAME_159   "Xuan"
+    IDS_CJK_CHS_FNAME_160   "Xuanyuan"
+    IDS_CJK_CHS_FNAME_161   "Xue"
+    IDS_CJK_CHS_FNAME_162   "Ya"
+    IDS_CJK_CHS_FNAME_163   "Yan"
+    IDS_CJK_CHS_FNAME_164   "Yang"
+    IDS_CJK_CHS_FNAME_165   "Yangshe"
+    IDS_CJK_CHS_FNAME_166   "Yao"
+    IDS_CJK_CHS_FNAME_167   "Ye"
+    IDS_CJK_CHS_FNAME_168   "Yi"
+    IDS_CJK_CHS_FNAME_169   "You"
+    IDS_CJK_CHS_FNAME_170   "Yu"
+    IDS_CJK_CHS_FNAME_171   "Yuan"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_172   "Yuchi"
+    IDS_CJK_CHS_FNAME_173   "Yuezheng"
+    IDS_CJK_CHS_FNAME_174   "Yuwen"
+    IDS_CJK_CHS_FNAME_175   "Zaifu"
+    IDS_CJK_CHS_FNAME_176   "Zeng"
+    IDS_CJK_CHS_FNAME_177   "Zhang"
+    IDS_CJK_CHS_FNAME_178   "Zhangsun"
+    IDS_CJK_CHS_FNAME_179   "Zhao"
+    IDS_CJK_CHS_FNAME_180   "Zheng"
+    IDS_CJK_CHS_FNAME_181   "Zhong"
+    IDS_CJK_CHS_FNAME_182   "Zhongchang"
+    IDS_CJK_CHS_FNAME_183   "Zhongli"
+    IDS_CJK_CHS_FNAME_184   "Zhongsun"
+    IDS_CJK_CHS_FNAME_185   "Zhou"
+    IDS_CJK_CHS_FNAME_186   "Zhu"
+    IDS_CJK_CHS_FNAME_187   "Zhuansun"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CJK_CHS_FNAME_188   "Zhuge"
+    IDS_CJK_CHS_FNAME_189   "Zhushi"
+    IDS_CJK_CHS_FNAME_190   "Ziche"
+    IDS_CJK_CHS_FNAME_191   "Ziju"
+    IDS_CJK_CHS_FNAME_192   "Zisang"
+    IDS_CJK_CHS_FNAME_193   "Zishu"
+    IDS_CJK_CHS_FNAME_194   "Zongzheng"
+    IDS_CJK_CHS_FNAME_195   "Zou"
+    IDS_CJK_CHS_FNAME_196   "Zuo"
+    IDS_CJK_CHS_FNAME_197   "Zuoqiu"
+    IDS_CJK_CHS_FNAME_END   "中文姓结束"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING360           "reserved"
+    IDS_STRING361           "re"
+    IDS_STRING362           "reserved"
+    IDS_STRING363           "reserved"
+    IDS_STRING364           "reserved"
+    IDS_STRING365           "reserved"
+    IDS_STRING366           "reserved"
+    IDS_STRING367           "reserved"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING368           "reserved"
+    IDS_STRING369           "reserved"
+    IDS_STRING370           "reserved"
+    IDS_STRING371           "reserved"
+    IDS_STRING372           "reserved"
+    IDS_STRING373           "reserved"
+    IDS_STRING374           "reserved"
+    IDS_STRING375           "reserved"
+    IDS_STRING376           "reserved"
+    IDS_STRING380           "特质"
+    IDS_STRING381           "陆军特质"
+    IDS_STRING382           "空军特质"
+    IDS_STRING383           "海军特质"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING384           "res"
+    IDS_STRING385           "res"
+    IDS_STRING386           "res"
+    IDS_STRING387           "res"
+    IDS_STRING388           "res"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TREE_SETI           "树形控件"
+    IDS_STRING2001          "姓"
+    IDS_STRING2002          "名字"
+    IDS_STRING2003          "国家代码"
+    IDS_STRING2004          "技能"
+    IDS_STRING2005          "reserved"
+    IDS_STRING2006          "reserved"
+    IDS_STRING2007          "reserved"
+    IDS_STRING2008          "reserved"
+    IDS_STRING2009          "reserved"
+    IDS_STRING2010          "reserved"
+    IDS_STRING2011          "reserved"
+    IDS_STRING2012          "reserved"
+    IDS_STRING2013          "reserved"
+    IDS_STRING2014          "reserved"
+    IDS_STRING2015          "reserved"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING2016          "reserved"
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\LeaderGenerator.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
